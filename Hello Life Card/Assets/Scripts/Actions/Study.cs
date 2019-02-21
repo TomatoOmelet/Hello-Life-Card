@@ -7,6 +7,7 @@ public class Study : MonoBehaviour
     public void StudyButton()
     {
         SystemManager.instance.playerIntelligence += IntelligenceIncrease();
+        SystemManager.instance.DayEnd();
     }
 
     /*this function returns how much intelligence will increase by studying,

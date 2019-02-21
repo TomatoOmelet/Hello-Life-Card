@@ -610,7 +610,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &410010025
 MonoBehaviour:
@@ -4030,6 +4030,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intelligenceText: {fileID: 1683340067}
+  moneyText: {fileID: 1153864372}
+  weekText: {fileID: 1494506865}
+  seasonText: {fileID: 410010025}
 --- !u!114 &2081128658
 MonoBehaviour:
   m_ObjectHideFlags: 0
