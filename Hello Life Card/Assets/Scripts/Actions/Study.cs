@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Study : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void StudyButton()
     {
-        
+        SystemManager.instance.playerIntelligence += IntelligenceIncrease();
     }
 
-    // Update is called once per frame
-    void Update()
+    /*this function returns how much intelligence will increase by studying,
+    considering the current situation (seanson, etc.)*/
+    private int IntelligenceIncrease()
     {
-        
+        return 1;
     }
 }
