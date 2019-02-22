@@ -32,7 +32,7 @@ public class JobHunt : MonoBehaviour
         float randval = Random.value;
         for (int i=0; i<chances.Count;i++)
         {
-            if (randval < chances[i])
+            if (randval < chances[i] && jobls[i]!=w.currentjob)
             {
                 newjob = i;
                 SetupWindow();
