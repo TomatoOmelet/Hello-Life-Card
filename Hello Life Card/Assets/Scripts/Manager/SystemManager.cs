@@ -25,10 +25,7 @@ public class SystemManager : MonoBehaviour
 
     public int playerIntelligence{
         get{return intelligence;}
-        set{
-            intelligence = value;
-            uiManager.UpdateIntelligenceUI(value);
-            }
+        set{intelligence = value;}
     }
     public int playerMoney{
         get{return money;}
