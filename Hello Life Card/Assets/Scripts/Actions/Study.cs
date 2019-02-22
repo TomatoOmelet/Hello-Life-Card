@@ -15,7 +15,7 @@ public class Study : MonoBehaviour
     {
         int intelligence = IntelligenceIncrease();
         //construc the sentence displayed before 
-        Dialogue dialogue = new Dialogue("", "After studying hard, your intlligence increases by " + intelligence + " .");
+        Dialogue dialogue = new Dialogue("", "After studying hard, your intelligence increases by " + intelligence + " .");
         yield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);
         StartCoroutine(AddScore(intelligence));
         SystemManager.instance.DayEnd();
