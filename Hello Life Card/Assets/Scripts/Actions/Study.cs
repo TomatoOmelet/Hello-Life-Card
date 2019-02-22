@@ -6,7 +6,16 @@ public class Study : MonoBehaviour
 {
     public void StudyButton()
     {
-        SystemManager.instance.playerIntelligence += IntelligenceIncrease();
+        StartCoroutine(StudyAction()); 
+    }
+
+    public IEnumerator StudyAction()
+    {
+        int intelligence = IntelligenceIncrease();
+        //construc the sentence displayed before 
+        Dialogue dialogue = new Dialogue("", "After studying hard, your intlligence increases by " + intelligence + " .");
+        yield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);
+        SystemManager.instance.playerIntelligence += intelligence;
         SystemManager.instance.DayEnd();
     }
 
