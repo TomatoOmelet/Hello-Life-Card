@@ -21,6 +21,7 @@ public class SystemManager : MonoBehaviour
 
     //object needed
     public SystemUIManager uiManager;
+    public DialogueManager dialogueManager;
 
     public int playerIntelligence{
         get{return intelligence;}
