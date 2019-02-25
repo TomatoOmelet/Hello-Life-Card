@@ -1163,7 +1163,7 @@ PrefabInstance:
     - target: {fileID: 4451619988678677477, guid: dd062cb3cf3ed754989ef704e53e20b9,
         type: 3}
       propertyPath: m_Name
-      value: Contact1 (3)
+      value: Contact (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4451619988678677474, guid: dd062cb3cf3ed754989ef704e53e20b9,
         type: 3}
@@ -1269,6 +1269,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964403396}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeleteContacts
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964403396}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContactButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd062cb3cf3ed754989ef704e53e20b9, type: 3}
@@ -2220,7 +2250,7 @@ PrefabInstance:
     - target: {fileID: 4451619988678677477, guid: dd062cb3cf3ed754989ef704e53e20b9,
         type: 3}
       propertyPath: m_Name
-      value: Contact1 (4)
+      value: Contact (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4451619988678677474, guid: dd062cb3cf3ed754989ef704e53e20b9,
         type: 3}
@@ -2326,6 +2356,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964403396}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeleteContacts
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964403396}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContactButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd062cb3cf3ed754989ef704e53e20b9, type: 3}
@@ -2454,7 +2514,7 @@ PrefabInstance:
     - target: {fileID: 4451619988678677477, guid: dd062cb3cf3ed754989ef704e53e20b9,
         type: 3}
       propertyPath: m_Name
-      value: Contact1 (1)
+      value: Contact (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4451619988678677474, guid: dd062cb3cf3ed754989ef704e53e20b9,
         type: 3}
@@ -2560,6 +2620,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964403396}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeleteContacts
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964403396}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContactButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd062cb3cf3ed754989ef704e53e20b9, type: 3}
@@ -5055,7 +5145,7 @@ PrefabInstance:
     - target: {fileID: 4451619988678677477, guid: dd062cb3cf3ed754989ef704e53e20b9,
         type: 3}
       propertyPath: m_Name
-      value: Contact1 (2)
+      value: Contact (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4451619988678677474, guid: dd062cb3cf3ed754989ef704e53e20b9,
         type: 3}
@@ -5162,6 +5252,36 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964403396}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeleteContacts
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964403396}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContactButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd062cb3cf3ed754989ef704e53e20b9, type: 3}
 --- !u!224 &2075644906 stripped
@@ -5265,6 +5385,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 69e814dff93a64e4dbc018405d82379f, type: 2}
   - {fileID: 11400000, guid: 099dd1b51aa08674784db5fa03fb32e3, type: 2}
   trustToSacrifice: 100
+  contactSucceedRate: 0.75
+  trustIncreasedEachContact: 15
 --- !u!1001 &4451619988752441398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5275,7 +5397,7 @@ PrefabInstance:
     - target: {fileID: 4451619988678677477, guid: dd062cb3cf3ed754989ef704e53e20b9,
         type: 3}
       propertyPath: m_Name
-      value: Contact1
+      value: Contact
       objectReference: {fileID: 0}
     - target: {fileID: 4451619988678677474, guid: dd062cb3cf3ed754989ef704e53e20b9,
         type: 3}
@@ -5382,5 +5504,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4451619987556909609, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964403396}
+    - target: {fileID: 4451619988496085370, guid: dd062cb3cf3ed754989ef704e53e20b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 964403396}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd062cb3cf3ed754989ef704e53e20b9, type: 3}

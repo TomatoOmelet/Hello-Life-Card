@@ -33,4 +33,18 @@ public class ContactsUIManager : MonoBehaviour
     {
         contactPanel.SetActive(false);
     }
+
+    public void DeleteContacts(int index)
+    {
+        SystemManager.instance.contactsManager.DeleteContacts(index);
+        //update the page
+        UpdateContacts();
+    }
+
+    public void ContactButton(int index)
+    {
+        CloseContactPanel();
+        //since we want to close this page, the routine needs to start on systemManager
+        SystemManager.instance.StartCoroutine(SystemManager.instance.contactsManager.ContactContacts(index));
+    }
 }
