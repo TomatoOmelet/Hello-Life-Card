@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Penny Money
   job: {fileID: 11400000, guid: f376499dda1711a4d886400d9b8a9ca8, type: 2}
+  trustForJob: 30

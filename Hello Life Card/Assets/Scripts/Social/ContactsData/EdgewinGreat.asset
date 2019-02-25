@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Edgewin Great
   job: {fileID: 11400000, guid: 92f575c6416dcfb4984031744bb49000, type: 2}
+  trustForJob: 70

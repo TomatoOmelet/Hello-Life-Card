@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Neo Bug
   m_EditorClassIdentifier: 
   name: Neo Bug
-  job: {fileID: 11400000, guid: c6aa1d86c8953bc45a81ce52286f36c0, type: 2}
+  job: {fileID: 11400000, guid: 87cd5cf7d66efef4a8879a53fbdce6da, type: 2}
+  trustForJob: 50

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Wither Fall
   job: {fileID: 11400000, guid: 051b85a2b27129f438e356f1a179192e, type: 2}
+  trustForJob: 40

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Seggy Fault
   job: {fileID: 11400000, guid: c6aa1d86c8953bc45a81ce52286f36c0, type: 2}
+  trustForJob: 60

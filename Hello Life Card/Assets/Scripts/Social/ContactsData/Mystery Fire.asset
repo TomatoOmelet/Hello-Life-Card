@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Mystery Fire
   job: {fileID: 11400000, guid: 31a3ef91fe31b7940b07803bf6c490ab, type: 2}
+  trustForJob: 80

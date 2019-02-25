@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Rice Disgusting
   job: {fileID: 11400000, guid: e96e8e376fa73324e84c423226d5ed55, type: 2}
+  trustForJob: 85

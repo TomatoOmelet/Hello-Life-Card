@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Wendy Four Dollar
   job: {fileID: 11400000, guid: 6269c4257c668bf49b3f1b965dbacaea, type: 2}
+  trustForJob: 25

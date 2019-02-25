@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Razz Streamer
   job: {fileID: 11400000, guid: 26f7b992408dedd43a809b1c27631189, type: 2}
+  trustForJob: 90
