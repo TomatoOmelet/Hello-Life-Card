@@ -113,9 +113,9 @@ public class SystemUIManager : MonoBehaviour
         for(int x = 0; x< value; ++x)
         {
             if(text == moneyText)
-                SystemManager.instance.uiManager.UpdateMoneyUI(++uiMoney);
+                UpdateMoneyUI(++uiMoney);
             else
-                SystemManager.instance.uiManager.UpdateIntelligenceUI(++uiIntelligence);
+                UpdateIntelligenceUI(++uiIntelligence);
             yield return null;
         }
     }
