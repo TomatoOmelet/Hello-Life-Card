@@ -24,7 +24,7 @@ public class Study : MonoBehaviour
     public IEnumerator AddScore(int value)
     {
         SystemManager.instance.playerIntelligence += value;
-        SystemManager.instance.uiManager.PromptIntelligenceChange(value);
+        //SystemManager.instance.uiManager.PromptIntelligenceChange(value);
         //add numbers one by one
         for(int x = 0; x< value; ++x)
         {

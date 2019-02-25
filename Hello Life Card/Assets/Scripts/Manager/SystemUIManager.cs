@@ -13,6 +13,7 @@ public class SystemUIManager : MonoBehaviour
     public TextMeshProUGUI weekText;
     public TextMeshProUGUI seasonText;
     public TextMeshProUGUI intelligenceChangePromptText;
+    public TextMeshProUGUI moneyChangePromptText;
 
     //update UI elements
     public void UpdateIntelligenceUI(int intelligence)
@@ -37,40 +38,40 @@ public class SystemUIManager : MonoBehaviour
 
     private Coroutine intelligencePromptRoutine;
 
-    public void PromptIntelligenceChange(int value)
+    public void PromptInfoChange(TextMeshProUGUI infoText, int value, Color posColor)
     {
         //make sure only one routine can touch this text
         if(intelligencePromptRoutine != null)
             StopCoroutine(intelligencePromptRoutine);
-        intelligencePromptRoutine = StartCoroutine(PromptIntelligenceChangeRoutine(value));
+        intelligencePromptRoutine = StartCoroutine(PromptInfoChangeRoutine(infoText, value, Color.green));
     }
-    public IEnumerator PromptIntelligenceChangeRoutine(int value)
+    public IEnumerator PromptInfoChangeRoutine(TextMeshProUGUI infoText, int value, Color posColor)
     {
         string info;
         //set the text and color
         if(value >= 0)
         {
             info = "+" + value;
-            intelligenceChangePromptText.color = Color.green;
+            infoText.color = posColor;
         }else{
             info = value.ToString();
-            intelligenceChangePromptText.color = Color.red;
+            infoText.color = Color.red;
         }
         //update the UI
-        intelligenceChangePromptText.text = info;
-        intelligenceChangePromptText.gameObject.SetActive(true);
+        infoText.text = info;
+        infoText.gameObject.SetActive(true);
         //stay opaque for a while 
         yield return new WaitForSeconds(0.5f);
-        Color currentColor = intelligenceChangePromptText.color;
+        Color currentColor = infoText.color;
         //fade 
         for(float x = 1; x >= 0; x -= 0.05f)
         {
             Color temp = currentColor;
             temp.a = x;
-            intelligenceChangePromptText.color = temp;
+            infoText.color = temp;
             yield return new WaitForSeconds(0.02f);
         } 
-        intelligenceChangePromptText.gameObject.SetActive(false);
+        infoText.gameObject.SetActive(false);
     }
 
 }

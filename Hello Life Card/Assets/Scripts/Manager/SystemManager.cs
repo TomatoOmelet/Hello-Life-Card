@@ -26,11 +26,17 @@ public class SystemManager : MonoBehaviour
 
     public int playerIntelligence{
         get{return intelligence;}
-        set{intelligence = value;}
+        set{
+            uiManager.PromptInfoChange(uiManager.intelligenceChangePromptText, value - intelligence, Color.green);
+            intelligence = value;
+            }
     }
     public int playerMoney{
         get{return money;}
-        set{money = value;}
+        set{
+            uiManager.PromptInfoChange(uiManager.moneyChangePromptText, value - intelligence, Color.yellow);
+            money = value;
+            }
     }
 
     void Awake()
