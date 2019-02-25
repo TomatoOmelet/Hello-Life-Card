@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Socialize : MonoBehaviour
 {
-    public ContactsManager contactsManager;
     public float GetContactsChance = 0.75f; //a number from 0 to 1 
+
     public void SocializeButton()
     {
         //if already have 5 contacts, fail
-        if(contactsManager.contactsList.Count >= 5)
+        if(SystemManager.instance.contactsManager.contactsList.Count >= 5)
         {
             Dialogue dialogue = new Dialogue("", "You already have too many friends. Your old cell phone cannot store more contacts.");
             StartCoroutine(SystemManager.instance.dialogueManager.DisplaySentence(dialogue));

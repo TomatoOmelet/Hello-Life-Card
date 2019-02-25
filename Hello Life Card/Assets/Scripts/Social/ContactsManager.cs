@@ -7,6 +7,7 @@ public class ContactsManager : MonoBehaviour
     public List<Contacts> contactsList{get;private set;} = new List<Contacts>();
     public ContactsData[] allContacts;
     private List<ContactsData> unusedContacts;
+    public int trustToSacrifice = 100;
     // Start is called before the first frame update
 
     void Awake()
@@ -24,4 +25,5 @@ public class ContactsManager : MonoBehaviour
         unusedContacts.Remove(data);
         return data;
     }
+
 }
