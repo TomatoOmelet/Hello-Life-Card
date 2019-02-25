@@ -75,7 +75,7 @@ public class JobHunt : MonoBehaviour
     //be refered a job instead of hunting it, that's cheating
     public void ReferJob(int newJob)
     {
-        SetupJobOffer(jobls[newJob]);
+        SetupJobOffer(jobls[newJob],newjob);
     }
 
     public int GetJobIndex(Job job)

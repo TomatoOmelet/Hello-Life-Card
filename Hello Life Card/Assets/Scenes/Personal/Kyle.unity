@@ -457,7 +457,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 31a3ef91fe31b7940b07803bf6c490ab, type: 2}
   - {fileID: 11400000, guid: 87cd5cf7d66efef4a8879a53fbdce6da, type: 2}
   - {fileID: 11400000, guid: 26f7b992408dedd43a809b1c27631189, type: 2}
-  intelratio: 0.075
+  intelratio: 0.03
   w: {fileID: 165106160}
 --- !u!114 &165106160
 MonoBehaviour:

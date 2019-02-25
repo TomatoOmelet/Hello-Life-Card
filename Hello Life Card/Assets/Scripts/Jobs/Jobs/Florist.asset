@@ -15,4 +15,4 @@ MonoBehaviour:
   jobname: Florist
   jobincome: 110
   jobhuntchance: 0.025
-  workmessage: You worked hard at your job and were paid {0}$
+  workmessage: After organizing bouquets for hours you are paid {0}$

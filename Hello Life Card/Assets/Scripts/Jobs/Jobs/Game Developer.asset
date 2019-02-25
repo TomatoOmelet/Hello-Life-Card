@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddbbfc9dab70af44fb4840955544eced, type: 3}
   m_Name: Game Developer
   m_EditorClassIdentifier: 
-  jobname: Florist
+  jobname: Game Developer
   jobincome: 180
   jobhuntchance: 0.01
-  workmessage: You worked hard at your job and were paid {0}$
+  workmessage: After creating a better game than this one you are paid {0}$
