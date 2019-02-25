@@ -66,4 +66,16 @@ public class JobHunt : MonoBehaviour
         jobswapwindow.SetActive(false);
         SystemManager.instance.DayEnd();
     }
+
+    //be refered a job instead of hunting it, that's cheating
+    public void ReferJob(int newJob)
+    {
+        newjob = newJob;
+        SetupWindow();
+    }
+
+    public int GetJobIndex(Job job)
+    {
+        return jobls.IndexOf(job);
+    }
 }

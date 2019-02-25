@@ -6594,6 +6594,7 @@ MonoBehaviour:
   trustToSacrifice: 100
   contactSucceedRate: 0.75
   trustIncreasedEachContact: 15
+  jobHunt: {fileID: 278458306}
 --- !u!1 &2090379566
 GameObject:
   m_ObjectHideFlags: 0

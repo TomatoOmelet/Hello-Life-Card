@@ -11,6 +11,7 @@ public class ContactsManager : MonoBehaviour
     public float contactSucceedRate = 0.75f;
     public int trustIncreasedEachContact = 15;
     private int contactsSacrificed = 0;
+    public JobHunt jobHunt;
     // Start is called before the first frame update
 
     void Awake()
@@ -52,11 +53,22 @@ public class ContactsManager : MonoBehaviour
             yield return SystemManager.instance.dialogueManager.DisplaySentence(successDialogue);
             //increase trust
             contactsList[index].trust += trustIncreasedEachContact;
+            //if trust is enough, offer job
+            if(contactsList[index].trust >= contactsList[index].data.trustForJob)
+            {
+                Dialogue jobDialogue = new Dialogue("", contactsList[index].data.name + " refers you to the company.");
+                yield return SystemManager.instance.dialogueManager.DisplaySentence(jobDialogue);
+                //get job index
+                int jobIndex = jobHunt.GetJobIndex(contactsList[index].data.job);
+                jobHunt.ReferJob(jobIndex);
+            }else{
+                SystemManager.instance.DayEnd();
+            }    
         }else{//fail
             Dialogue failDialogue = new Dialogue("", contactsList[index].data.name + " does not seem to enjoy hanging out with you.");
             yield return SystemManager.instance.dialogueManager.DisplaySentence(failDialogue);
+            SystemManager.instance.DayEnd();
         }
-        SystemManager.instance.DayEnd();
     }
 
 }

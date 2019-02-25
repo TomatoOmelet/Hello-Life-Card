@@ -4933,6 +4933,7 @@ MonoBehaviour:
   trustToSacrifice: 100
   contactSucceedRate: 0.75
   trustIncreasedEachContact: 15
+  jobHunt: {fileID: 537698999}
 --- !u!114 &1559109222
 MonoBehaviour:
   m_ObjectHideFlags: 0
