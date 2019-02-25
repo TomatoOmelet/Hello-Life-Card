@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     public GameObject dialogueBox;
-    public Text dialogueText;
+    public TextMeshProUGUI dialogueText;
     public Dialogue dialogue;
     
 
