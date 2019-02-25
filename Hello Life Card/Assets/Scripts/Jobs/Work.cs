@@ -23,13 +23,13 @@ public class Work : MonoBehaviour
 
     public IEnumerator GoToWork()
     {
-        
+        Debug.Log(SystemManager.instance.playerMoney);
         Dialogue d = new Dialogue("", string.Format(SystemManager.instance.currentJob.workmessage, Income()));
         yield return SystemManager.instance.dialogueManager.DisplaySentence(d);
         int income = Income();
-        SystemManager.instance.playerMoney += income;
         StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.moneyText, income));
         SystemManager.instance.DayEnd();
+        Debug.Log(SystemManager.instance.playerMoney);
     }
 
     private int Income()
