@@ -31,7 +31,7 @@ public class JobHunt : MonoBehaviour
         float randval = Random.value;
         for (int i=0; i<chances.Count;i++)
         {
-            if (randval < chances[i] && jobls[i]!=w.currentjob)
+            if (randval < chances[i] && jobls[i]!=SystemManager.instance.currentJob)
             {
                 SetupJobOffer(jobls[i],i);
                 break;
@@ -54,7 +54,7 @@ public class JobHunt : MonoBehaviour
     public void SetupJobOffer(Job j, int? index =null)
     {
         newjob = index ?? GetJobIndex(j);
-        SystemManager.instance.uiManager.SetupJobOfferWindow(j.jobname, j.jobincome, w.currentjob.jobname, w.currentjob.jobincome);
+        SystemManager.instance.uiManager.SetupJobOfferWindow(j.jobname, j.jobincome, SystemManager.instance.currentJob.jobname, SystemManager.instance.currentJob.jobincome);
     }
 
 
@@ -73,9 +73,9 @@ public class JobHunt : MonoBehaviour
     }
 
     //be refered a job instead of hunting it, that's cheating
-    public void ReferJob(int newJob)
+    public void ReferJob(Job newJob)
     {
-        SetupJobOffer(jobls[newJob],newjob);
+        SetupJobOffer(newJob);
     }
 
     public int GetJobIndex(Job job)

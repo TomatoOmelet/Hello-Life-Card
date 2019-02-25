@@ -54,13 +54,13 @@ public class ContactsManager : MonoBehaviour
             //increase trust
             contactsList[index].trust += trustIncreasedEachContact;
             //if trust is enough, offer job
-            if(contactsList[index].trust >= contactsList[index].data.trustForJob)
+            if(contactsList[index].trust >= contactsList[index].data.trustForJob && !contactsList[index].hasOfferedJob
+                && contactsList[index].data.job != SystemManager.instance.currentJob)
             {
                 Dialogue jobDialogue = new Dialogue("", contactsList[index].data.name + " refers you to the company.");
                 yield return SystemManager.instance.dialogueManager.DisplaySentence(jobDialogue);
-                //get job index
-                int jobIndex = jobHunt.GetJobIndex(contactsList[index].data.job);
-                jobHunt.ReferJob(jobIndex);
+                jobHunt.ReferJob(contactsList[index].data.job);
+                contactsList[index].hasOfferedJob = true;
             }else{
                 SystemManager.instance.DayEnd();
             }    

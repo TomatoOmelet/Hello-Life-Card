@@ -6,6 +6,7 @@ public class Contacts : MonoBehaviour
 {
     public ContactsData data;
     public int trust;
+    [System.NonSerialized]public bool hasOfferedJob = false;
 
     public Contacts(ContactsData data){
         this.data = data;

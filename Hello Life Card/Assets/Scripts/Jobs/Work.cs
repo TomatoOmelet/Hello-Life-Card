@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class Work : MonoBehaviour
 {
-    public Job currentjob;
-
-
     void Start()
     {
         UpdateJobUI();
@@ -15,7 +12,7 @@ public class Work : MonoBehaviour
 
     public void ChangeJob(Job newjob)
     {
-        currentjob = newjob;
+        SystemManager.instance.currentJob = newjob;
         UpdateJobUI();
     }
     
@@ -27,7 +24,7 @@ public class Work : MonoBehaviour
     public IEnumerator GoToWork()
     {
         
-        Dialogue d = new Dialogue("", string.Format(currentjob.workmessage, Income()));
+        Dialogue d = new Dialogue("", string.Format(SystemManager.instance.currentJob.workmessage, Income()));
         yield return SystemManager.instance.dialogueManager.DisplaySentence(d);
         SystemManager.instance.playerMoney += Income();
         SystemManager.instance.uiManager.UpdateMoneyUI(SystemManager.instance.playerMoney);
@@ -36,11 +33,11 @@ public class Work : MonoBehaviour
 
     private int Income()
     {
-        return currentjob.jobincome;
+        return SystemManager.instance.currentJob.jobincome;
     }
 
     private void UpdateJobUI()
     {
-        SystemManager.instance.uiManager.UpdateJobInfoUI(currentjob.jobname, currentjob.jobincome);
+        SystemManager.instance.uiManager.UpdateJobInfoUI(SystemManager.instance.currentJob.jobname, SystemManager.instance.currentJob.jobincome);
     }
 }

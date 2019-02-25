@@ -1523,7 +1523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9548c0e60f8744aa91f2c9615ecda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentjob: {fileID: 11400000, guid: 6269c4257c668bf49b3f1b965dbacaea, type: 2}
 --- !u!114 &491560850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5060,6 +5059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0478a921d9f344e824cac9bd859ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentJob: {fileID: 11400000, guid: 6269c4257c668bf49b3f1b965dbacaea, type: 2}
   uiManager: {fileID: 1639332522}
   dialogueManager: {fileID: 426012928}
   contactsManager: {fileID: 1639332521}

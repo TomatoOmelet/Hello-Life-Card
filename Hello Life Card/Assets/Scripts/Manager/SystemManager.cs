@@ -18,6 +18,7 @@ public class SystemManager : MonoBehaviour
     private int money = 0;
     private Season season = Season.Spring;
     private int week = 1;
+    public Job currentJob;
 
     //object needed
     public SystemUIManager uiManager;
