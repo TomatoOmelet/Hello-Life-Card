@@ -15,15 +15,15 @@ public class Socialize : MonoBehaviour
             StartCoroutine(SystemManager.instance.dialogueManager.DisplaySentence(dialogue));
         }else{
             //do socialize
-            if(Random.Range(0,1f) <= GetContactsChance)
+            if(Random.Range(0,1f) > GetContactsChance || SystemManager.instance.contactsManager.unusedContacts.Count == 0)
             {
+                Dialogue dialogue = new Dialogue("", "You didn't meet anyone.");
+                StartCoroutine(SocializeEnd(new Dialogue[]{dialogue}));
+            }else{
                 ContactsData newContact = SystemManager.instance.contactsManager.SocializeNewContacts();
                 Dialogue dialogue1= new Dialogue(newContact.name, "You are interesting. Let's become friends.");
                 Dialogue dialogue2= new Dialogue("", "You got a new contacts. Check your friends in the Contacts Page.");
                 StartCoroutine(SocializeEnd(new Dialogue[]{dialogue1, dialogue2}));
-            }else{
-                Dialogue dialogue = new Dialogue("", "You didn't meet anyone.");
-                StartCoroutine(SocializeEnd(new Dialogue[]{dialogue}));
             }
         }
     }

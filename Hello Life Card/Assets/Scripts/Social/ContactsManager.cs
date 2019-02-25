@@ -6,7 +6,7 @@ public class ContactsManager : MonoBehaviour
 {
     public List<Contacts> contactsList{get;private set;} = new List<Contacts>();
     public ContactsData[] allContacts;
-    private List<ContactsData> unusedContacts;
+    public List<ContactsData> unusedContacts;
     public int trustToSacrifice = 100;
     public float contactSucceedRate = 0.75f;
     public int trustIncreasedEachContact = 15;
