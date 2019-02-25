@@ -8,11 +8,14 @@ public class ShopManager : MonoBehaviour
     // Start is called before the first frame update
     public int money;//just used for testing purposes
     public Dictionary<string,System.Action> items = new Dictionary<string,System.Action>();
+    RNGGenerator rng = new RNGGenerator();
 
     private void Start()
     {
         items.Add("Textbook", addIntelligence);
-        //items.Add("Cheap lottery",RNGGenerator.)
+        items.Add("Fancy Desk", intelligenceModifier);
+        items.Add("Fancy Cell Phone", addContacts);
+        items.Add("Cheap Lottery", rng.GenerateCPrize);
     }
 
     
@@ -48,5 +51,12 @@ public class ShopManager : MonoBehaviour
         Debug.Log("Player intel : "+SystemManager.instance.playerIntelligence);
         Debug.Log("Player cash : " + SystemManager.instance.playerMoney);
     }
+    private void intelligenceModifier()
+    {
 
+    }
+    private void addContacts()
+    {
+
+    }
 }

@@ -15,8 +15,8 @@ public class LoadScene : MonoBehaviour
     {
         
     }
-    public void OnPress()
+    public void ChangeScene(int build)
     {
-        SceneManager.LoadScene("Blake");
+        SceneManager.LoadScene(build);
     }
 }
