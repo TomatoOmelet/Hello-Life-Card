@@ -27,14 +27,14 @@ public class SystemManager : MonoBehaviour
     public int playerIntelligence{
         get{return intelligence;}
         set{
-            uiManager.PromptInfoChange(uiManager.intelligenceChangePromptText, value - intelligence, Color.green);
+            uiManager.PromptIntelligenceChange(value - intelligence);
             intelligence = value;
             }
     }
     public int playerMoney{
         get{return money;}
         set{
-            uiManager.PromptInfoChange(uiManager.moneyChangePromptText, value - intelligence, Color.yellow);
+            uiManager.PromptMoneyChange(value - money);
             money = value;
             }
     }

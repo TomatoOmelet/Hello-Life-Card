@@ -35,15 +35,24 @@ public class SystemUIManager : MonoBehaviour
     {
         seasonText.text = "Season: " + season.ToString();
     }
-
+    //==============================================================================
+    //Prompt the change of intelligence/money
+    //==============================================================================
     private Coroutine intelligencePromptRoutine;
-
-    public void PromptInfoChange(TextMeshProUGUI infoText, int value, Color posColor)
+    private Coroutine moneyPromptRoutine;
+    public void PromptIntelligenceChange(int value)
     {
         //make sure only one routine can touch this text
         if(intelligencePromptRoutine != null)
             StopCoroutine(intelligencePromptRoutine);
-        intelligencePromptRoutine = StartCoroutine(PromptInfoChangeRoutine(infoText, value, Color.green));
+        intelligencePromptRoutine = StartCoroutine(PromptInfoChangeRoutine(intelligenceChangePromptText, value, Color.green));
+    }
+    public void PromptMoneyChange(int value)
+    {
+        //make sure only one routine can touch this text
+        if(moneyPromptRoutine != null)
+            StopCoroutine(moneyPromptRoutine);
+        moneyPromptRoutine = StartCoroutine(PromptInfoChangeRoutine(moneyChangePromptText, value, Color.yellow));
     }
     public IEnumerator PromptInfoChangeRoutine(TextMeshProUGUI infoText, int value, Color posColor)
     {
