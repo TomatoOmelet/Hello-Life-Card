@@ -12,6 +12,7 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
         items.Add("Textbook", addIntelligence);
+        //items.Add("Cheap lottery",RNGGenerator.)
     }
 
     
