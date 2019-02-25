@@ -15,7 +15,7 @@ public class ShopManager : MonoBehaviour
         items.Add("Textbook", addIntelligence);
         items.Add("Fancy Desk", intelligenceModifier);
         items.Add("Fancy Cell Phone", addContacts);
-        items.Add("Cheap Lottery", rng.GenerateCPrize);
+        //items.Add("Cheap Lottery", rng.GenerateCPrize);
     }
 
     
@@ -48,8 +48,7 @@ public class ShopManager : MonoBehaviour
     private void addIntelligence()
     {
         SystemManager.instance.playerIntelligence += 3;
-        Debug.Log("Player intel : "+SystemManager.instance.playerIntelligence);
-        Debug.Log("Player cash : " + SystemManager.instance.playerMoney);
+        
     }
     private void intelligenceModifier()
     {
