@@ -459,8 +459,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 26f7b992408dedd43a809b1c27631189, type: 2}
   intelratio: 0.075
   w: {fileID: 165106160}
-  jobinfotext: {fileID: 1467089213}
-  jobswapwindow: {fileID: 611660049}
 --- !u!114 &165106160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,7 +472,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentjob: {fileID: 11400000, guid: 6269c4257c668bf49b3f1b965dbacaea, type: 2}
-  jobinfotext: {fileID: 1411024972}
 --- !u!114 &165106161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,7 +5009,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 165106160}
-        m_MethodName: GoToWork
+        m_MethodName: WorkButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5126,6 +5123,9 @@ MonoBehaviour:
   seasonText: {fileID: 1422765506}
   intelligenceChangePromptText: {fileID: 488896569}
   moneyChangePromptText: {fileID: 1764429619}
+  jobInfoText: {fileID: 1411024972}
+  joboffertext: {fileID: 1467089213}
+  jobofferwind: {fileID: 611660049}
 --- !u!114 &1725693321
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,12 +18,25 @@ public class Work : MonoBehaviour
         currentjob = newjob;
         UpdateJobUI();
     }
-
-    public void GoToWork()
+    
+    public void WorkButton()
     {
-        SystemManager.instance.playerMoney += currentjob.jobincome;
+        StartCoroutine("GoToWork");
+    }
+
+    public IEnumerator GoToWork()
+    {
+        
+        Dialogue d = new Dialogue("", string.Format(currentjob.workmessage, Income()));
+        yield return SystemManager.instance.dialogueManager.DisplaySentence(d);
+        SystemManager.instance.playerMoney += Income();
         SystemManager.instance.uiManager.UpdateMoneyUI(SystemManager.instance.playerMoney);
         SystemManager.instance.DayEnd();
+    }
+
+    private int Income()
+    {
+        return currentjob.jobincome;
     }
 
     private void UpdateJobUI()

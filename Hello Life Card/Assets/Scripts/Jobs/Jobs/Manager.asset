@@ -15,3 +15,4 @@ MonoBehaviour:
   jobname: Manager
   jobincome: 90
   jobhuntchance: 0.05
+  workmessage: You worked hard at your job and were paid {0}$
