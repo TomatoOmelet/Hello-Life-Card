@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddbbfc9dab70af44fb4840955544eced, type: 3}
   m_Name: Unemployed
   m_EditorClassIdentifier: 
-  jobname: 
+  jobname: Unemployed
   jobincome: 0
   jobhuntchance: 0
-  workmessage: You worked hard at your job and were paid {0}$
+  workmessage: You do nothing...
