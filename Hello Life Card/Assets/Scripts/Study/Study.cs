@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Study : MonoBehaviour
 {
-    private int uiIntelligence; //the current intelligence displayed on UI, instead of real intelligence
+    
 
     public void StudyButton()
     {
@@ -17,20 +17,8 @@ public class Study : MonoBehaviour
         //construc the sentence displayed before 
         Dialogue dialogue = new Dialogue("", "After studying hard, your intelligence increases by " + intelligence + " .");
         yield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);
-        StartCoroutine(AddScore(intelligence));
+        StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.intelligenceText, intelligence));
         SystemManager.instance.DayEnd();
-    }
-
-    public IEnumerator AddScore(int value)
-    {
-        SystemManager.instance.playerIntelligence += value;
-        //SystemManager.instance.uiManager.PromptIntelligenceChange(value);
-        //add numbers one by one
-        for(int x = 0; x< value; ++x)
-        {
-            SystemManager.instance.uiManager.UpdateIntelligenceUI(++uiIntelligence);
-            yield return null;
-        }
     }
 
     /*this function returns how much intelligence will increase by studying,

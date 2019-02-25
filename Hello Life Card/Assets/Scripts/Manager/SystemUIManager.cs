@@ -97,7 +97,32 @@ public class SystemUIManager : MonoBehaviour
         infoText.gameObject.SetActive(false);
     }
 
+    //==============================================================================
+    //Increasing of Money Intelligence
+    //==============================================================================
+    private int uiIntelligence; //the current intelligence displayed on UI, instead of real intelligence
+    private int uiMoney; 
+    public IEnumerator AddValueToUI(TextMeshProUGUI text, int value)
+    {
+        if(text == moneyText)
+            SystemManager.instance.playerMoney += value;
+        else
+            SystemManager.instance.playerIntelligence += value;
+        //SystemManager.instance.uiManager.PromptIntelligenceChange(value);
+        //add numbers one by one
+        for(int x = 0; x< value; ++x)
+        {
+            if(text == moneyText)
+                SystemManager.instance.uiManager.UpdateMoneyUI(++uiMoney);
+            else
+                SystemManager.instance.uiManager.UpdateIntelligenceUI(++uiIntelligence);
+            yield return null;
+        }
+    }
+
+    //==============================================================================
     //Sets up the Job Offer window
+    //==============================================================================
     public void SetupJobOfferWindow(string newjobname, int newjobincome, string oldjobname, int oldjobincome)
     {
         jobofferwind.SetActive(true);

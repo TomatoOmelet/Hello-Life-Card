@@ -26,8 +26,9 @@ public class Work : MonoBehaviour
         
         Dialogue d = new Dialogue("", string.Format(SystemManager.instance.currentJob.workmessage, Income()));
         yield return SystemManager.instance.dialogueManager.DisplaySentence(d);
-        SystemManager.instance.playerMoney += Income();
-        SystemManager.instance.uiManager.UpdateMoneyUI(SystemManager.instance.playerMoney);
+        int income = Income();
+        SystemManager.instance.playerMoney += income;
+        StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.moneyText, income));
         SystemManager.instance.DayEnd();
     }
 
