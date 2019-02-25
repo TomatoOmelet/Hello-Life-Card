@@ -1,13 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 
 public class Work : MonoBehaviour
 {
     public Job currentjob;
-    [SerializeField] private TextMeshProUGUI jobinfotext;
 
 
     void Start()
@@ -30,6 +28,6 @@ public class Work : MonoBehaviour
 
     private void UpdateJobUI()
     {
-        jobinfotext.text = string.Format("Current Job: {0}\nCurrent Pay: ${1}", currentjob.jobname, currentjob.jobincome);
+        SystemManager.instance.uiManager.UpdateJobInfoUI(currentjob.jobname, currentjob.jobincome);
     }
 }

@@ -8,9 +8,8 @@ public class JobHunt : MonoBehaviour
     [SerializeField] private List<Job> jobls;
     [SerializeField] private float intelratio = .5f;
     [SerializeField] private Work w;
-    [SerializeField] private TextMeshProUGUI jobinfotext;
     private int newjob=-1;
-    [SerializeField] private GameObject jobswapwindow;
+
    
     public void Hunt()
     {
@@ -34,8 +33,7 @@ public class JobHunt : MonoBehaviour
         {
             if (randval < chances[i] && jobls[i]!=w.currentjob)
             {
-                newjob = i;
-                SetupWindow();
+                SetupJobOffer(jobls[i],i);
                 break;
             } 
         }
@@ -47,15 +45,16 @@ public class JobHunt : MonoBehaviour
         
     }
 
-    private void SetupWindow()
+    public void SetupJobOffer(Job j, int? index =null)
     {
-        jobswapwindow.SetActive(true);
-        jobinfotext.text = string.Format("You got a new job offer to be a {0} that has an income of {1}. Or you can keep your current job, {2} that has an income of {3}.", jobls[newjob].jobname, jobls[newjob].jobincome, w.currentjob.jobname, w.currentjob.jobincome);
+        newjob = index ?? GetJobIndex(j);
+        SystemManager.instance.uiManager.SetupJobOfferWindow(j.jobname, j.jobincome, w.currentjob.jobname, w.currentjob.jobincome);
     }
+
 
     public void ConfirmNewJob()
     {
-        jobswapwindow.SetActive(false);
+        SystemManager.instance.uiManager.CloseJobOfferWindow();
         w.ChangeJob(jobls[newjob]);
         SystemManager.instance.DayEnd();
         
@@ -63,15 +62,14 @@ public class JobHunt : MonoBehaviour
 
     public void CancelNewJob()
     {
-        jobswapwindow.SetActive(false);
+        SystemManager.instance.uiManager.CloseJobOfferWindow();
         SystemManager.instance.DayEnd();
     }
 
     //be refered a job instead of hunting it, that's cheating
     public void ReferJob(int newJob)
     {
-        newjob = newJob;
-        SetupWindow();
+        SetupJobOffer(jobls[newJob]);
     }
 
     public int GetJobIndex(Job job)

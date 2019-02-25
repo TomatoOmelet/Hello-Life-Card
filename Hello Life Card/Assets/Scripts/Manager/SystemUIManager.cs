@@ -14,6 +14,9 @@ public class SystemUIManager : MonoBehaviour
     public TextMeshProUGUI seasonText;
     public TextMeshProUGUI intelligenceChangePromptText;
     public TextMeshProUGUI moneyChangePromptText;
+    public TextMeshProUGUI jobInfoText;
+    public TextMeshProUGUI joboffertext;
+    public GameObject jobofferwind;
 
     //update UI elements
     public void UpdateIntelligenceUI(int intelligence)
@@ -35,6 +38,11 @@ public class SystemUIManager : MonoBehaviour
     {
         seasonText.text = "Season: " + season.ToString();
     }
+    public void UpdateJobInfoUI(string jobname, int jobincome)
+    {
+        jobInfoText.text= string.Format("Current Job: {0}\nCurrent Pay: ${1}", jobname, jobincome);
+    }
+
     //==============================================================================
     //Prompt the change of intelligence/money
     //==============================================================================
@@ -83,4 +91,15 @@ public class SystemUIManager : MonoBehaviour
         infoText.gameObject.SetActive(false);
     }
 
+    //Sets up the Job Offer window
+    public void SetupJobOfferWindow(string newjobname, int newjobincome, string oldjobname, int oldjobincome)
+    {
+        jobofferwind.SetActive(true);
+        joboffertext.text = string.Format("You got a new job offer to be a {0} that has an income of {1}. Or you can keep your current job, {2} that has an income of {3}.", newjobname, newjobincome, oldjobname, oldjobincome);
+    }
+
+    public void CloseJobOfferWindow()
+    {
+        jobofferwind.SetActive(false);
+    }
 }
