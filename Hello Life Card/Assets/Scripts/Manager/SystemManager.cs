@@ -12,7 +12,7 @@ public enum Season
 
 public class SystemManager : MonoBehaviour
 {
-    public static SystemManager instance;
+    public static SystemManager instance{get; private set;}
     //states
     private int intelligence = 0;
     private int money = 0;
@@ -22,6 +22,7 @@ public class SystemManager : MonoBehaviour
     //object needed
     public SystemUIManager uiManager;
     public DialogueManager dialogueManager;
+    public ContactsManager contactsManager;
 
     public int playerIntelligence{
         get{return intelligence;}

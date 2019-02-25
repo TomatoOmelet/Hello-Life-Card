@@ -400,6 +400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 278458303}
   - component: {fileID: 278458304}
+  - component: {fileID: 278458305}
   m_Layer: 0
   m_Name: Actions
   m_TagString: Untagged
@@ -414,12 +415,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278458302}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2081128656}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &278458304
 MonoBehaviour:
@@ -433,6 +434,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b51cb17b227da47a1477a3a3048715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &278458305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278458302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4792839f949f284497122a588ffd8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contactsManager: {fileID: 2081128659}
+  GetContactsChance: 0.75
 --- !u!1 &311918138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,7 +3840,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1876726666}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 278458305}
+        m_MethodName: SocializeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1876726666
@@ -4231,6 +4257,7 @@ GameObject:
   - component: {fileID: 2081128656}
   - component: {fileID: 2081128658}
   - component: {fileID: 2081128657}
+  - component: {fileID: 2081128659}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -4248,8 +4275,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 278458303}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4284,3 +4310,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiManager: {fileID: 2081128657}
   dialogueManager: {fileID: 923460158}
+  contactsManager: {fileID: 2081128659}
+--- !u!114 &2081128659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081128655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a35df090fce6e4e978d2150b533c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allContacts:
+  - {fileID: 11400000, guid: d43f535f5003f074d8538f4190c4da92, type: 2}
+  - {fileID: 11400000, guid: 521885ce6527df64faf9d820d610540b, type: 2}
+  - {fileID: 11400000, guid: cee5ed914986ae34fb8d265c80bdd5f0, type: 2}
+  - {fileID: 11400000, guid: 2fb77563e75b8ed4f92fa6ec32f49eb5, type: 2}
+  - {fileID: 11400000, guid: f62cbbff28ad60341b0ea418bb79e258, type: 2}
+  - {fileID: 11400000, guid: 8df29081098594542a31483b71802794, type: 2}
+  - {fileID: 11400000, guid: a7501979d19113641a39dbe4c6285f31, type: 2}
+  - {fileID: 11400000, guid: 6abc873fc8362e2499b8c0904c2e3863, type: 2}
+  - {fileID: 11400000, guid: 69e814dff93a64e4dbc018405d82379f, type: 2}
+  - {fileID: 11400000, guid: 099dd1b51aa08674784db5fa03fb32e3, type: 2}

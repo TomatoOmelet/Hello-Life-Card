@@ -7,4 +7,5 @@ public class ContactsData : ScriptableObject
 {
     public string name;
     public Job job;
+    public int trustForJob;
 }
