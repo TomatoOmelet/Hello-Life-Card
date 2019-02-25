@@ -19,7 +19,7 @@ public class ContactsPage : MonoBehaviour
         nameText.text = contacts.data.name;
         trustText.text = "Trust: " + contacts.trust;
         //if trust is enough, Delete becom sacrifice
-        if(contacts.trust > SystemManager.instance.contactsManager.trustToSacrifice)
+        if(contacts.trust >= SystemManager.instance.contactsManager.trustToSacrifice)
         {
             deleteButtonImage.color = Color.red;
             deleteText.text = "Sacrifice";
