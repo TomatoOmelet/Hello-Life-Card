@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddbbfc9dab70af44fb4840955544eced, type: 3}
-  m_Name: Job
+  m_Name: Unemployed
   m_EditorClassIdentifier: 
   jobname: 
   jobincome: 0
