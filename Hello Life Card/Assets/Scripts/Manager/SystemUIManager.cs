@@ -12,6 +12,7 @@ public class SystemUIManager : MonoBehaviour
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI weekText;
     public TextMeshProUGUI seasonText;
+    public TextMeshProUGUI lifeCardFragmentText;
     public TextMeshProUGUI intelligenceChangePromptText;
     public TextMeshProUGUI moneyChangePromptText;
     public TextMeshProUGUI jobInfoText;
@@ -41,6 +42,11 @@ public class SystemUIManager : MonoBehaviour
     public void UpdateJobInfoUI(string jobname, int jobincome)
     {
         jobInfoText.text= string.Format("Current Job: {0}\nCurrent Pay: ${1}", jobname, jobincome);
+    }
+
+    public void UpdateLifeCardFragmentUI(int value)
+    {
+        lifeCardFragmentText.text = "Life Card Fragments: " + value;
     }
 
     //==============================================================================

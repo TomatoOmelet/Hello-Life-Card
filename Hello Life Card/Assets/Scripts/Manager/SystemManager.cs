@@ -16,15 +16,23 @@ public class SystemManager : MonoBehaviour
     //states
     private int intelligence = 0;
     private int money = 0;
+    private int lifeCardFragment = 0;
     private Season season = Season.Spring;
     private int week = 1;
     public Job currentJob;
+    
 
     //object needed
     public SystemUIManager uiManager;
     public DialogueManager dialogueManager;
     public ContactsManager contactsManager;
-
+    public int playerLifeCardFragment {
+        get{return lifeCardFragment;} 
+        set{
+            lifeCardFragment = value;
+            uiManager.UpdateLifeCardFragmentUI(value);
+        }
+    }
     public int playerIntelligence{
         get{return intelligence;}
         set{

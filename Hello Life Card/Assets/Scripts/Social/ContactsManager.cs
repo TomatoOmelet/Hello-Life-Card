@@ -39,7 +39,8 @@ public class ContactsManager : MonoBehaviour
             contactsList.RemoveAt(index);
         }else{//sacrifice
             contactsList.RemoveAt(index);
-            ++contactsSacrificed;
+            //++contactsSacrificed;
+            SystemManager.instance.playerLifeCardFragment++;
         }
     }
 
