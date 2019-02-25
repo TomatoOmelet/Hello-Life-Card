@@ -40,9 +40,15 @@ public class JobHunt : MonoBehaviour
 
         if (newjob == -1)
         {
-            SystemManager.instance.DayEnd();
+            StartCoroutine("Rejection");
         }
         
+    }
+
+    private IEnumerator Rejection()
+    {
+        yield return SystemManager.instance.dialogueManager.DisplaySentence(new Dialogue("", "Sorry, Nobody wanted you..."));
+        SystemManager.instance.DayEnd();
     }
 
     public void SetupJobOffer(Job j, int? index =null)
