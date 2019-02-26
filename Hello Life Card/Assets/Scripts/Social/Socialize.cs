@@ -21,7 +21,7 @@ public class Socialize : MonoBehaviour
                 StartCoroutine(SocializeEnd(new Dialogue[]{dialogue}));
             }else{
                 ContactsData newContact = SystemManager.instance.contactsManager.SocializeNewContacts();
-                Dialogue dialogue1= new Dialogue(newContact.name, "You are interesting. Let's become friends.");
+                Dialogue dialogue1= new Dialogue(newContact.name, newContact.socializeSentence);
                 Dialogue dialogue2= new Dialogue("", "You got a new contacts. Check your friends in the Contacts Page.");
                 StartCoroutine(SocializeEnd(new Dialogue[]{dialogue1, dialogue2}));
             }

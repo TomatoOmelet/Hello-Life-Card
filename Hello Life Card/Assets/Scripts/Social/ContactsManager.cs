@@ -49,8 +49,7 @@ public class ContactsManager : MonoBehaviour
         //success
         if(Random.Range(0, 1f) < contactSucceedRate)
         {
-            Dialogue successDialogue = new Dialogue("", "Spent some time together, " + 
-                                                        contactsList[index].data.name + " trusts you more than before.");
+            Dialogue successDialogue = new Dialogue(contactsList[index].data.name, contactsList[index].data.trustIncreaseSentence);
             yield return SystemManager.instance.dialogueManager.DisplaySentence(successDialogue);
             //increase trust
             contactsList[index].trust += trustIncreasedEachContact;
@@ -58,7 +57,7 @@ public class ContactsManager : MonoBehaviour
             if(contactsList[index].trust >= contactsList[index].data.trustForJob && !contactsList[index].hasOfferedJob
                 && contactsList[index].data.job != SystemManager.instance.currentJob)
             {
-                Dialogue jobDialogue = new Dialogue("", contactsList[index].data.name + " refers you to the company.");
+                Dialogue jobDialogue = new Dialogue(contactsList[index].data.name, contactsList[index].data.referSentence);
                 yield return SystemManager.instance.dialogueManager.DisplaySentence(jobDialogue);
                 jobHunt.ReferJob(contactsList[index].data.job);
                 contactsList[index].hasOfferedJob = true;
