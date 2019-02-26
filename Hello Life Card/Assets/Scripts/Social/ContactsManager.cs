@@ -38,10 +38,21 @@ public class ContactsManager : MonoBehaviour
             unusedContacts.Add(contactsList[index].data);
             contactsList.RemoveAt(index);
         }else{//sacrifice
-            contactsList.RemoveAt(index);
-            //++contactsSacrificed;
-            SystemManager.instance.playerLifeCardFragment++;
+            
+            StartCoroutine(Sacrifice(index));
         }
+    }
+
+    public IEnumerator Sacrifice(int index)
+    {
+        contactsList.RemoveAt(index);
+        ++contactsSacrificed;
+        //close panel
+        GameObject.FindObjectOfType<ContactsUIManager>().CloseContactPanel();
+        //display sentence
+        Dialogue dialogue = new Dialogue("", "After Sacrificing your friend to Uncle Dead, you get a life card fragment. They used to be your best friend...");
+        yield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);
+        SystemManager.instance.playerLifeCardFragment++;
     }
 
     public IEnumerator ContactContacts(int index)
