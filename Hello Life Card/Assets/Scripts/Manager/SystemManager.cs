@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum Season
 {
@@ -79,6 +80,12 @@ public class SystemManager : MonoBehaviour
     //===============================================================
     public void DayEnd()
     {
+        //check if game end
+        if(week == 9 && season == Season.Winter)
+        {
+            GameEnd();
+            return;
+        }
         //increase week and check if need to go to next season
         if(++week > 9)
         {
@@ -89,4 +96,33 @@ public class SystemManager : MonoBehaviour
         uiManager.UpdateWeekUI(week);
         uiManager.UpdateSeasonUI(season);
     }
+
+    //check the end of the game
+    public void GameEnd()
+    {
+        //end1: death
+        if(lifeCardFragment < 3)
+        {
+            StartCoroutine(EndDeath());
+        }else{//end2: life
+            StartCoroutine(EndLife());
+        }
+    }
+
+    public IEnumerator EndDeath()
+    {
+        Dialogue dialogue1 = new Dialogue("", "After four seasons, you still didn't get a life card. Uncle Dead took your life.");
+        Dialogue dialogue2 = new Dialogue("", "Bad End.");
+        yield return dialogueManager.DisplaySentence(new Dialogue[]{dialogue1, dialogue2});
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public IEnumerator EndLife()
+    {
+        Dialogue dialogue1 = new Dialogue("", "After your hard work, you get your life card. You give it to Uncle Death to exchange for your life, and live happily ever since.");
+        Dialogue dialogue2 = new Dialogue("", "Good End.");
+        yield return dialogueManager.DisplaySentence(new Dialogue[]{dialogue1, dialogue2});
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
