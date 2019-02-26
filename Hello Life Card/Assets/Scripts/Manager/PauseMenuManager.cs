@@ -16,7 +16,7 @@ public class PauseMenuManager : MonoBehaviour
 
     public void MainMenuButton()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        SystemManager.instance.BackToMenu();
     }
 
     public void QuitButton()

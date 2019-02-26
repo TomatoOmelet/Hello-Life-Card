@@ -22,8 +22,8 @@ public class ClickParticleManager : MonoBehaviour
         {
             //Vector3 pos = myCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector3 pos = ScreenToCanvasPoint(Input.mousePosition);
-            Debug.Log(pos);
-            Debug.Log(Input.mousePosition);
+            //Debug.Log(pos);
+            //Debug.Log(Input.mousePosition);
             //pos.z = -9;
             GameObject particle = Instantiate(particleGenerater, pos, Quaternion.identity);
             particle.transform.SetParent(particleCanvas, false);

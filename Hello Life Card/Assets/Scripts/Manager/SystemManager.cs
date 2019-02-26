@@ -75,6 +75,12 @@ public class SystemManager : MonoBehaviour
         uiManager.UpdateSeasonUI(season);
     }
 
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Destroy(gameObject);
+    }
+
     //===============================================================
     //Game Progress
     //===============================================================
@@ -114,7 +120,7 @@ public class SystemManager : MonoBehaviour
         Dialogue dialogue1 = new Dialogue("", "After four seasons, you still didn't get a life card. Uncle Dead took your life.");
         Dialogue dialogue2 = new Dialogue("", "Bad End.");
         yield return dialogueManager.DisplaySentence(new Dialogue[]{dialogue1, dialogue2});
-        SceneManager.LoadScene("MainMenu");
+        BackToMenu();
     }
 
     public IEnumerator EndLife()
@@ -122,7 +128,7 @@ public class SystemManager : MonoBehaviour
         Dialogue dialogue1 = new Dialogue("", "After your hard work, you get your life card. You give it to Uncle Death to exchange for your life, and live happily ever since.");
         Dialogue dialogue2 = new Dialogue("", "Good End.");
         yield return dialogueManager.DisplaySentence(new Dialogue[]{dialogue1, dialogue2});
-        SceneManager.LoadScene("MainMenu");
+        BackToMenu();
     }
 
 }
