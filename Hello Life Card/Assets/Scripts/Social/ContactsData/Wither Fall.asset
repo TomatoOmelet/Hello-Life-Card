@@ -15,3 +15,9 @@ MonoBehaviour:
   name: Wither Fall
   job: {fileID: 11400000, guid: 051b85a2b27129f438e356f1a179192e, type: 2}
   trustForJob: 40
+  socializeSentence: You look like a grass, so boring. But I'm a kind people, kind
+    enough to become your friend since otherwise no one will make friends with a poor
+    helpless person like you.
+  trustIncreaseSentence: It's so boring talking with you. I prefer to talk to a tree.
+  referSentence: I guess if you stay with flowers more, you can be more interesting.
+    I have to make you a florist if you don't want to be so boring anymore.

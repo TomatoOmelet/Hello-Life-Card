@@ -15,3 +15,11 @@ MonoBehaviour:
   name: Neo Bug
   job: {fileID: 11400000, guid: 87cd5cf7d66efef4a8879a53fbdce6da, type: 2}
   trustForJob: 50
+  socializeSentence: Oh, your shadow..... Hmmm, I see, what a poor human. You are
+    cursed by the moon. Guess I will need to stay around you to prevent you from being
+    killed.
+  trustIncreaseSentence: I sense some evil power. It seems I need to leave now. Don't
+    follow me, you should live a peaceful life like a human. I'm sure we will meet
+    again.
+  referSentence: You struggled to live until today. Maybe you are not only a common
+    human you seem to be. If you wish, you can fight with me to save this world.

@@ -15,3 +15,6 @@ MonoBehaviour:
   name: Bryan House
   job: {fileID: 11400000, guid: 072c0c69acf51d64b84c2ac050175f45, type: 2}
   trustForJob: 35
+  socializeSentence: House House House, House House.
+  trustIncreaseSentence: House, House House.
+  referSentence: HOUSUU!

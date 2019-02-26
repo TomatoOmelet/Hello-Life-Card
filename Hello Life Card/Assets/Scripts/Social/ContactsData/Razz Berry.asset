@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad6a4dd5f24ad724e8926957d85c114a, type: 3}
-  m_Name: Razz Streamer
+  m_Name: Razz Berry
   m_EditorClassIdentifier: 
-  name: Razz Streamer
+  name: Razz Berry
   job: {fileID: 11400000, guid: 26f7b992408dedd43a809b1c27631189, type: 2}
   trustForJob: 90
+  socializeSentence: Hey, you're pretty cool! We should hang out more!
+  trustIncreaseSentence: I'm happy to have met you. Thanks for being such a good friend!
+  referSentence: I think you'd be a great Youtuber. You'd gain an audience in no time!
+    What do you say?

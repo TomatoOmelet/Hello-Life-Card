@@ -15,3 +15,9 @@ MonoBehaviour:
   name: Rice Disgusting
   job: {fileID: 11400000, guid: e96e8e376fa73324e84c423226d5ed55, type: 2}
   trustForJob: 85
+  socializeSentence: You also like the icecream at Sticklands? Want to get milkshake
+    together next Monday?
+  trustIncreaseSentence: The food at this restauant is overprice and they put too
+    much sugar. If Sticklands is still here we won't need to eat this garbage.
+  referSentence: You are so good at complaining about bad food. You cannot waste your
+    talent. How about working in my company?

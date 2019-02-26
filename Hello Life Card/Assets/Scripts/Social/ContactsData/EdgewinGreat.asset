@@ -15,3 +15,9 @@ MonoBehaviour:
   name: Edgewin Great
   job: {fileID: 11400000, guid: 92f575c6416dcfb4984031744bb49000, type: 2}
   trustForJob: 70
+  socializeSentence: Are you learning Unity? You can come to my programming workshop
+    if you need help :)
+  trustIncreaseSentence: You learn very fast. Keep working hard. You can ask me anytime
+    if you meet a problem :D
+  referSentence: You are a talented person. You should work with me at Bmazon Game
+    Studio XD
