@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ClickParticleManager : MonoBehaviour
 {
     public Transform particleCanvas;
-    public CanvasScaler scaler;
     public GameObject particleGenerater;
     public Camera myCamera;
 
@@ -18,7 +17,6 @@ public class ClickParticleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.mousePosition);
         //when player click, generate a particle
         if(Input.GetMouseButtonDown(0))
         {

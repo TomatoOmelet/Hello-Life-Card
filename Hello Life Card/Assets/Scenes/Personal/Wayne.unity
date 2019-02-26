@@ -8144,7 +8144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleCanvas: {fileID: 1880420944}
-  particleGenerater: {fileID: 3378425948009235415, guid: 3f38b76f53c327b4980b18bc8987942c,
+  particleGenerater: {fileID: 4563415815193384388, guid: a243d11154ac60a428f36bdc1062ff40,
     type: 3}
   myCamera: {fileID: 693415364}
 --- !u!1 &1906662839
