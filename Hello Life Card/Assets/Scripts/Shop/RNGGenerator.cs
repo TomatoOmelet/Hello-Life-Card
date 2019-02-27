@@ -32,7 +32,7 @@ public class RNGGenerator : MonoBehaviour
     public string GenerateCPrize()
     {
         int landed = this.randomPercentage();
-
+        Debug.Log("number landed: "+ landed);
         {
             PrizeRanges(new List<(double, string)>
             {
@@ -89,7 +89,7 @@ public class RNGGenerator : MonoBehaviour
                 (5.0,"1000"),
                 (10.0,"Textbook"),
                 (10.0,"Fancy Desk"),
-                (1.0,"Life Card Fragment") });
+                (5.0,"Life Card Fragment") });
             return prizes[landed];
         }
     }
