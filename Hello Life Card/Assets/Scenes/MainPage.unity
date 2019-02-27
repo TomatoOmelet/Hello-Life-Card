@@ -733,12 +733,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 521885ce6527df64faf9d820d610540b, type: 2}
   - {fileID: 11400000, guid: cee5ed914986ae34fb8d265c80bdd5f0, type: 2}
   - {fileID: 11400000, guid: 2fb77563e75b8ed4f92fa6ec32f49eb5, type: 2}
-  - {fileID: 11400000, guid: f62cbbff28ad60341b0ea418bb79e258, type: 2}
-  - {fileID: 11400000, guid: 8df29081098594542a31483b71802794, type: 2}
-  - {fileID: 11400000, guid: a7501979d19113641a39dbe4c6285f31, type: 2}
   - {fileID: 11400000, guid: 6abc873fc8362e2499b8c0904c2e3863, type: 2}
+  - {fileID: 11400000, guid: 8df29081098594542a31483b71802794, type: 2}
   - {fileID: 11400000, guid: 69e814dff93a64e4dbc018405d82379f, type: 2}
-  - {fileID: 11400000, guid: 099dd1b51aa08674784db5fa03fb32e3, type: 2}
   unusedContacts: []
   trustToSacrifice: 100
   contactSucceedRate: 0.75
@@ -1413,7 +1410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
