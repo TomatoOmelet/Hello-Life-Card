@@ -72,7 +72,7 @@ public class ShopManager : MonoBehaviour
             //Debug.Log(itemNC.Substring(i + 1));
             //StartCoroutine(SubtractCash(cost));
             items[itemNC.Substring(i + 1)]();
-            StartCoroutine(SubtractCash(cost));
+            StartCoroutine(AdjustCash(cost,-1));
             //Debug.Log(SystemManager.instance.playerMoney + " total money");
             
             //do the item action
@@ -159,11 +159,11 @@ public IEnumerator AddScore(int value)
             yield return null;
         }
     }
-    public IEnumerator SubtractCash(int value)
+    public IEnumerator AdjustCash(int value,int sign)
     {
         Debug.Log("TOTAL AMOUNT OF MONEY" + SystemManager.instance.playerMoney);
         
-        SystemManager.instance.playerMoney -= value;
+        SystemManager.instance.playerMoney += (value*sign);
         //SystemManager.instance.uiManager.PromptIntelligenceChange(value);
         //add numbers one by one
         Debug.Log(SystemManager.instance.playerMoney);

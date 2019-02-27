@@ -57,6 +57,7 @@ public class RNGGenerator : MonoBehaviour
         int landed = this.randomPercentage();
         {
             //handlemedium
+            Debug.Log("Bnumber landed: " + landed);
             PrizeRanges(new List<(double, string)>
             {
                 (49.0,"Nothing"),
