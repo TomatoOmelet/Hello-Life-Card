@@ -23,11 +23,24 @@ public class Work : MonoBehaviour
 
     public IEnumerator GoToWork()
     {
-        Dialogue d = new Dialogue("", string.Format(SystemManager.instance.currentJob.workmessage, Income()));
-        yield return SystemManager.instance.dialogueManager.DisplaySentence(d);
-        int income = Income();
-        StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.moneyText, income));
-        SystemManager.instance.DayEnd();
+        //Continue as normal if they do not have 0 income
+        if (SystemManager.instance.currentJob.jobincome != 0)
+        {
+            Dialogue d = new Dialogue("", string.Format(SystemManager.instance.currentJob.workmessage, Income()));
+            yield return SystemManager.instance.dialogueManager.DisplaySentence(d);
+            int income = Income();
+            StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.moneyText, income));
+            SystemManager.instance.DayEnd();
+        }
+        //Otherwise dont allow them to work
+        else
+        {
+            List<Dialogue> dialogues = new List<Dialogue>();
+            dialogues.Add(new Dialogue("", "You are unemployed, and cannot work having no job."));
+            dialogues.Add( new Dialogue("", "Try improving your intelligence and hunting for a job."));
+            
+            yield return SystemManager.instance.dialogueManager.DisplaySentence(dialogues);
+        }
     }
 
     private int Income()
