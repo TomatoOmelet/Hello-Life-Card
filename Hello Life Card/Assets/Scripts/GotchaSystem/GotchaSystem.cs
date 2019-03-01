@@ -8,10 +8,14 @@ public class GotchaSystem : MonoBehaviour
     public JobHunt jobHunt;
     public GameObject resume;
     public GameObject result;
+    public GameObject closeButton;
     public Transform resumeLocation;
     public Transform recruiterLocation;
 
     private Job job;
+
+    [Header("Animation Effect")]
+    public ShrinkingRing[] shrinkingRings;
 
     void Start()
     {
@@ -30,28 +34,30 @@ public class GotchaSystem : MonoBehaviour
         //reset location of result    
         result.transform.position = recruiterLocation.position; 
         result.GetComponent<Button>().interactable = false;
+        //able to close
+        closeButton.SetActive(true);
     }
 
     public void Gotcha()
     {
         //set button to not interactable
+        closeButton.SetActive(false);
         resume.GetComponent<Button>().interactable = false;
         job = jobHunt.Hunt();
 
         StartCoroutine(GotchaAnimation(job));
-        //if get no job
-        if(job == null)
-        {
-            SystemManager.instance.DayEnd();
-        }else{
-            jobHunt.SetupJobOffer(job);
-        }
     }
 
     public IEnumerator GotchaAnimation(Job job)
     {
-        float speed = 1300f;
+        float speed = 3000f;
         speed *= Time.deltaTime;
+        //play ring effect, wait until the last finish playing
+        for(int x = 0; x < shrinkingRings.Length - 1; ++x)
+        {
+            StartCoroutine(shrinkingRings[x].Play());
+        }
+        yield return shrinkingRings[shrinkingRings.Length - 1].Play();
         //move resume up
         for(float y = resumeLocation.position.y; y < recruiterLocation.position.y; y += speed)
         {
@@ -76,6 +82,16 @@ public class GotchaSystem : MonoBehaviour
         
     }
 
+    public void OpenResult()
+    {
+        if(job != null)
+        {
+            jobHunt.SetupJobOffer(job);
+        }else{
+            SystemManager.instance.DayEnd();
+        }
+        Reset();
+    }
     //====================================================================================
     //UI 
     //====================================================================================
@@ -91,13 +107,6 @@ public class GotchaSystem : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void OpenResult()
-    {
-        if(job != null)
-        {
-            jobHunt.SetupJobOffer(job);
-        }
-        Reset();
-    }
+   
 
 }
