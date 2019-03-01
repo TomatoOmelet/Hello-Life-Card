@@ -2133,12 +2133,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 20
+  m_fontSize: 30
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_textAlignment: 257
   m_isAlignmentEnumConverted: 1
@@ -2179,10 +2179,10 @@ MonoBehaviour:
     spaceCount: 29
     wordCount: 30
     linkCount: 0
-    lineCount: 4
+    lineCount: 5
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -2739,6 +2739,7 @@ RectTransform:
   - {fileID: 1906662840}
   - {fileID: 1258269113}
   - {fileID: 784759099}
+  - {fileID: 502674473}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2898,8 +2899,8 @@ RectTransform:
   - {fileID: 289612264}
   - {fileID: 1033884987}
   - {fileID: 881109350}
-  m_Father: {fileID: 784759099}
-  m_RootOrder: 1
+  m_Father: {fileID: 502236521}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2937,6 +2938,12 @@ MonoBehaviour:
   confirmButton: {fileID: 1523438887}
   refuseButton: {fileID: 289612263}
   okButton: {fileID: 1033884986}
+  stars:
+  - {fileID: 1373102072}
+  - {fileID: 841520576}
+  - {fileID: 1827710916}
+  - {fileID: 645492396}
+  - {fileID: 1038492114}
 --- !u!1 &507745009
 GameObject:
   m_ObjectHideFlags: 0
@@ -4563,7 +4570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &784759099
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4576,7 +4583,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 633798127}
-  - {fileID: 502674473}
   m_Father: {fileID: 502236521}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5569,7 +5575,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
+  m_fontSize: 44.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5580,7 +5586,7 @@ MonoBehaviour:
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 1
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -10488,17 +10494,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 521885ce6527df64faf9d820d610540b, type: 2}
   - {fileID: 11400000, guid: cee5ed914986ae34fb8d265c80bdd5f0, type: 2}
   - {fileID: 11400000, guid: 2fb77563e75b8ed4f92fa6ec32f49eb5, type: 2}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 8df29081098594542a31483b71802794, type: 2}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 6abc873fc8362e2499b8c0904c2e3863, type: 2}
   - {fileID: 11400000, guid: 69e814dff93a64e4dbc018405d82379f, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 8df29081098594542a31483b71802794, type: 2}
+  - {fileID: 11400000, guid: 6abc873fc8362e2499b8c0904c2e3863, type: 2}
   unusedContacts: []
   trustToSacrifice: 100
   contactSucceedRate: 0.75
   trustIncreasedEachContact: 15
-  jobHunt: {fileID: 0}
+  jobHunt: {fileID: 502674474}
 --- !u!114 &2078210288
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -72,7 +72,15 @@ public class GotchaSystem : MonoBehaviour
         }
         resume.transform.position = recruiterLocation.position;
         //wait for a while 
-        //yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
+        //if didn't get response
+        if(job == null && Random.Range(0,2) == 0)
+        {
+            yield return new WaitForSeconds(1);
+            jobHunt.SetupNoResponse();
+            Reset();
+            yield break;
+        }
         //move result down
         for(float y = recruiterLocation.position.y; y > resumeLocation.position.y ; y -= speed * Time.deltaTime)
         {
@@ -93,7 +101,7 @@ public class GotchaSystem : MonoBehaviour
         {
             jobHunt.SetupJobOffer(job);
         }else{
-            SystemManager.instance.DayEnd();
+            jobHunt.SetupRejection();
         }
         Reset();
     }
