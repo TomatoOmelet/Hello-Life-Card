@@ -27,6 +27,9 @@ public class ClickParticleManager : MonoBehaviour
             //pos.z = -9;
             GameObject particle = Instantiate(particleGenerater, pos, Quaternion.identity);
             particle.transform.SetParent(particleCanvas, false);
+            particle.GetComponent<ParticleGenerator>().Play();
+            Destroy(particle);
+            //Destroy(particle);
             //particle.GetComponent<ParticleSystem>().Emit();
             //Destroy(particle, 2f);
         }

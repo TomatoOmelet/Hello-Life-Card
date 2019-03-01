@@ -16,6 +16,7 @@ public class GotchaSystem : MonoBehaviour
 
     [Header("Animation Effect")]
     public ShrinkingRing[] shrinkingRings;
+    public ParticleGenerator particleGenerator;
 
     void Start()
     {
@@ -82,8 +83,8 @@ public class GotchaSystem : MonoBehaviour
             speed += speedAccelerate;
         }
         result.transform.position = resumeLocation.position;
+        particleGenerator.Play();
         result.GetComponent<Button>().interactable = true;
-        
     }
 
     public void OpenResult()
