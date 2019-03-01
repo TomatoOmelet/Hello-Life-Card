@@ -21,24 +21,18 @@ public class ClickParticleManager : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             //Vector3 pos = myCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 pos = ScreenToCanvasPoint(Input.mousePosition);
+            Vector3 pos = ParticleManager.ScreenToCanvasPoint(Input.mousePosition, particleCanvas);
             //Debug.Log(pos);
             //Debug.Log(Input.mousePosition);
             //pos.z = -9;
             GameObject particle = Instantiate(particleGenerater, pos, Quaternion.identity);
             particle.transform.SetParent(particleCanvas, false);
+            particle.GetComponent<ParticleGenerator>().Play();
+            Destroy(particle);
+            //Destroy(particle);
             //particle.GetComponent<ParticleSystem>().Emit();
             //Destroy(particle, 2f);
         }
     }
 
-    //transform a screen point to a canvas point
-    public Vector3 ScreenToCanvasPoint(Vector3 point)
-    {
-        //scale mouse to canvas
-        //get canvas size
-        float canvasX = (point.x - particleCanvas.transform.position.x) / particleCanvas.transform.localScale.x;
-        float canvasY = (point.y - particleCanvas.transform.position.y) / particleCanvas.transform.localScale.y;
-        return new Vector3(canvasX, canvasY, 0);
-    }
 }

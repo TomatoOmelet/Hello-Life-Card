@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3229571839877041611}
   - component: {fileID: 1297540751779903189}
   m_Layer: 0
-  m_Name: particleGenerator
+  m_Name: gotchaParticleGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,11 +48,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e421c0b817fb394dae1722a54196a45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minNum: 5
-  maxNum: 10
+  minNum: 20
+  maxNum: 30
   minSpeed: 3
   maxSpeed: 5
-  lifeTime: 0.2
+  lifeTime: 1
   rotateSpeed: 3
+  randomColor: 1
   particle: {fileID: 3378425948009235415, guid: 3f38b76f53c327b4980b18bc8987942c,
     type: 3}

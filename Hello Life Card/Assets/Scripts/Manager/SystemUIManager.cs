@@ -120,17 +120,5 @@ public class SystemUIManager : MonoBehaviour
         }
     }
 
-    //==============================================================================
-    //Sets up the Job Offer window
-    //==============================================================================
-    public void SetupJobOfferWindow(string newjobname, int newjobincome, string oldjobname, int oldjobincome)
-    {
-        jobofferwind.SetActive(true);
-        joboffertext.text = string.Format("You got a new job offer to be a {0} that has an income of {1}$. Or you can keep your current job, {2} that has an income of {3}$.", newjobname, newjobincome, oldjobname, oldjobincome);
-    }
 
-    public void CloseJobOfferWindow()
-    {
-        jobofferwind.SetActive(false);
-    }
 }

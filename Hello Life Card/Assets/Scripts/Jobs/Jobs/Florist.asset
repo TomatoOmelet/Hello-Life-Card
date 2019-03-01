@@ -15,4 +15,5 @@ MonoBehaviour:
   jobname: Florist
   jobincome: 110
   jobhuntchance: 0.025
+  star: 4
   workmessage: After organizing bouquets for hours you are paid {0}$

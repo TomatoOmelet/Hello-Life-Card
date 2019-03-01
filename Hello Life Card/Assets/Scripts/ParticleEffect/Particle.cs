@@ -16,18 +16,23 @@ public class Particle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += velocity;
-        transform.Rotate(rotateSpeed);
+        transform.localPosition += velocity * Time.deltaTime * 60;
+        transform.Rotate(rotateSpeed * Time.deltaTime * 60);
     }
 
     public void Move(Vector3 velocity, Vector3 rotateSpeed, float lifeTime)
+    {
+        Initialize(velocity, rotateSpeed);
+        StartCoroutine(Die(lifeTime, 0.02f));
+    }
+
+    public void Initialize(Vector3 velocity, Vector3 rotateSpeed)
     {
         //vlocity and size shoule be scale by windows
         float scale = Screen.width / baseWidth;
         transform.localScale *= scale;
         this.velocity = velocity * scale;
         this.rotateSpeed = rotateSpeed;
-        StartCoroutine(Die(lifeTime, 0.02f));
     }
 
     //become smaller and destroy itself after life time
