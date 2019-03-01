@@ -15,4 +15,5 @@ MonoBehaviour:
   jobname: Quality Assurance
   jobincome: 160
   jobhuntchance: 0.025
+  star: 4
   workmessage: After spending hours testing and debugging you are paid {0}$

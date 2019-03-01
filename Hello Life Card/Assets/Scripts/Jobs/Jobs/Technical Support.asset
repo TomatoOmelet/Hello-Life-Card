@@ -15,4 +15,5 @@ MonoBehaviour:
   jobname: Technical Support
   jobincome: 140
   jobhuntchance: 0.02
+  star: 4
   workmessage: After helping someone who deleted System32 you are paid {0}$

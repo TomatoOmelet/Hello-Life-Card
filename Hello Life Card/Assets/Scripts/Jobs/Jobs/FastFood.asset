@@ -15,4 +15,5 @@ MonoBehaviour:
   jobname: Fast Food Worker
   jobincome: 50
   jobhuntchance: 0.05
+  star: 3
   workmessage: After hours of frying hamburgers and fries you are paid {0}$

@@ -8,6 +8,7 @@ public class Job : ScriptableObject
     public string jobname;
     public int jobincome;
     public float jobhuntchance;
+    [Range(3,5)]public int star;
     public string workmessage = "You worked hard at your job and were paid {0}$";
 
 }

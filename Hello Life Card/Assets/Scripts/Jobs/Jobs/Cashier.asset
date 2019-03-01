@@ -15,5 +15,6 @@ MonoBehaviour:
   jobname: Cashier
   jobincome: 70
   jobhuntchance: 0.05
+  star: 3
   workmessage: After several hours at the till the shift is over and you are paid
     {0}$

@@ -15,4 +15,5 @@ MonoBehaviour:
   jobname: Manager
   jobincome: 90
   jobhuntchance: 0.05
+  star: 3
   workmessage: After bossing people around and micromanaging you are paid {0}$

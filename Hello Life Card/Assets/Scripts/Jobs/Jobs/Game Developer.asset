@@ -15,4 +15,5 @@ MonoBehaviour:
   jobname: Game Developer
   jobincome: 180
   jobhuntchance: 0.01
+  star: 5
   workmessage: After creating a better game than this one you are paid {0}$

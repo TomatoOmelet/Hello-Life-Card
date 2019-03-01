@@ -15,4 +15,5 @@ MonoBehaviour:
   jobname: YouTuber
   jobincome: 300
   jobhuntchance: 0.01
+  star: 5
   workmessage: After Several hours of talking about random things you are paid {0}$

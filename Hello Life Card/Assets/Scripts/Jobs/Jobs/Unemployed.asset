@@ -15,4 +15,5 @@ MonoBehaviour:
   jobname: Unemployed
   jobincome: 0
   jobhuntchance: 0
+  star: 3
   workmessage: You do nothing...

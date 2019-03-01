@@ -15,4 +15,5 @@ MonoBehaviour:
   jobname: Restaurant Critic
   jobincome: 250
   jobhuntchance: 0.01
+  star: 5
   workmessage: After tearing apart another restaurant, you are paid {0}$
