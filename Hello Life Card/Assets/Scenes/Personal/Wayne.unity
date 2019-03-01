@@ -1907,6 +1907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 0.8
   shrinkSpeed: 0.02
+  shrinkSpeedAccelerate: 0.001
   rotateSpeed: 1
   particleRotateSpeed: 1
   particleNum: 6
@@ -3444,6 +3445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1.15
   shrinkSpeed: 0.02
+  shrinkSpeedAccelerate: 0.001
   rotateSpeed: 1
   particleRotateSpeed: 1
   particleNum: 8
@@ -4589,6 +4591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1
   shrinkSpeed: 0.02
+  shrinkSpeedAccelerate: 0.001
   rotateSpeed: 1
   particleRotateSpeed: 1
   particleNum: 7
@@ -5105,6 +5108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1.25
   shrinkSpeed: 0.02
+  shrinkSpeedAccelerate: 0.001
   rotateSpeed: 1
   particleRotateSpeed: 1
   particleNum: 9
@@ -7728,6 +7732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 0.55
   shrinkSpeed: 0.02
+  shrinkSpeedAccelerate: 0.001
   rotateSpeed: 1
   particleRotateSpeed: 1
   particleNum: 5

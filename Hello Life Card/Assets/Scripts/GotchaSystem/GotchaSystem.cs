@@ -50,8 +50,10 @@ public class GotchaSystem : MonoBehaviour
 
     public IEnumerator GotchaAnimation(Job job)
     {
-        float speed = 3000f;
-        speed *= Time.deltaTime;
+        float moveSpeed = 6000;
+        float speedAccelerate = 200;
+        float speed = moveSpeed;
+
         //play ring effect, wait until the last finish playing
         for(int x = 0; x < shrinkingRings.Length - 1; ++x)
         {
@@ -59,23 +61,25 @@ public class GotchaSystem : MonoBehaviour
         }
         yield return shrinkingRings[shrinkingRings.Length - 1].Play();
         //move resume up
-        for(float y = resumeLocation.position.y; y < recruiterLocation.position.y; y += speed)
+        for(float y = resumeLocation.position.y; y < recruiterLocation.position.y; y += speed * Time.deltaTime)
         {
             Vector3 newPosition = resumeLocation.position;
             newPosition.y = y;
             resume.transform.position = newPosition;
             yield return new WaitForSeconds(0.02f);
+            speed -= speedAccelerate;
         }
         resume.transform.position = recruiterLocation.position;
         //wait for a while 
         //yield return new WaitForSeconds(2f);
         //move result down
-        for(float y = recruiterLocation.position.y; y > resumeLocation.position.y ; y -= speed)
+        for(float y = recruiterLocation.position.y; y > resumeLocation.position.y ; y -= speed * Time.deltaTime)
         {
             Vector3 newPosition = recruiterLocation.position;
             newPosition.y = y;
             result.transform.position = newPosition;
             yield return new WaitForSeconds(0.02f);
+            speed += speedAccelerate;
         }
         result.transform.position = resumeLocation.position;
         result.GetComponent<Button>().interactable = true;

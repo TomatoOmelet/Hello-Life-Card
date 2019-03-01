@@ -6,6 +6,7 @@ public class ShrinkingRing : MonoBehaviour
 {
     public float width;
     public float shrinkSpeed;
+    public float shrinkSpeedAccelerate;
     public float rotateSpeed;
     public float particleRotateSpeed;
     public int particleNum;
@@ -46,11 +47,13 @@ public class ShrinkingRing : MonoBehaviour
         transform.Rotate(0, 0, Random.Range(0, 360));
         //move particles towards the center
         float len = width;
-        for(float x = len; x > 0; x -= shrinkSpeed)
+        float speed = shrinkSpeed;
+        for(float x = len; x > 0; x -= speed)
         {
             for(int index = 0; index < particleList.Count; ++index)
                 particleList[index].transform.localPosition = particlePositionList[index] * x/len;
             yield return new WaitForSeconds(0.02f);
+            speed += shrinkSpeedAccelerate;
         }
         //destroy particles
         foreach(GameObject parti in particleList)
