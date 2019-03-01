@@ -11,7 +11,7 @@ public class JobHunt : MonoBehaviour
     private int newjob=-1;
 
    
-    public void Hunt()
+    public Job Hunt()
     {
         int intel = SystemManager.instance.playerIntelligence;
         newjob = -1;
@@ -33,16 +33,19 @@ public class JobHunt : MonoBehaviour
         {
             if (randval < chances[i] && jobls[i]!=SystemManager.instance.currentJob)
             {
-                SetupJobOffer(jobls[i],i);
-                break;
+                //SetupJobOffer(jobls[i],i);
+                //break;
+                return jobls[i];
             } 
         }
 
+        /* 
         if (newjob == -1)
         {
-            StartCoroutine("Rejection");
+            //StartCoroutine("Rejection");
         }
-        
+        */
+        return null;
     }
 
     private IEnumerator Rejection()
