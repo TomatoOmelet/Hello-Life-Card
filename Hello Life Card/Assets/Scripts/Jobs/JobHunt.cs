@@ -10,6 +10,13 @@ public class JobHunt : MonoBehaviour
     [SerializeField] private Work w;
     private int newjob=-1;
 
+    [Header("UI")]
+    public GameObject jobofferwind;
+    public TextMeshProUGUI joboffertext;
+    public TextMeshProUGUI jobWindTitle;
+    public GameObject confirmButton;
+    public GameObject refuseButton;
+    public GameObject okButton;
    
     public Job Hunt()
     {
@@ -48,6 +55,10 @@ public class JobHunt : MonoBehaviour
         return null;
     }
 
+    //=======================================================================================
+    //UI
+    //=======================================================================================
+
     private IEnumerator Rejection()
     {
         yield return SystemManager.instance.dialogueManager.DisplaySentence(new Dialogue("", "Sorry, Nobody wanted you..."));
@@ -57,13 +68,49 @@ public class JobHunt : MonoBehaviour
     public void SetupJobOffer(Job j, int? index =null)
     {
         newjob = index ?? GetJobIndex(j);
-        SystemManager.instance.uiManager.SetupJobOfferWindow(j.jobname, j.jobincome, SystemManager.instance.currentJob.jobname, SystemManager.instance.currentJob.jobincome);
+        SetupJobOfferWindow(j.jobname, j.jobincome, SystemManager.instance.currentJob.jobname, SystemManager.instance.currentJob.jobincome);
     }
 
+    public void SetupJobOfferWindow(string newjobname, int newjobincome, string oldjobname, int oldjobincome)
+    {
+        jobofferwind.SetActive(true);
+        //set buttons
+        confirmButton.SetActive(true);
+        refuseButton.SetActive(true);
+        okButton.SetActive(false);
+        jobWindTitle.text = "New Job";
+        joboffertext.text = string.Format("You got a new job offer to be a {0} that has an income of {1}$. Or you can keep your current job, {2} that has an income of {3}$.", newjobname, newjobincome, oldjobname, oldjobincome);
+    }
+
+    public void SetupNoResponse()
+    {
+        jobofferwind.SetActive(true);
+        //set buttons
+        confirmButton.SetActive(false);
+        refuseButton.SetActive(false);
+        okButton.SetActive(true);
+        
+        jobWindTitle.text = "Hmmmmm....";
+        joboffertext.text = string.Format("You never hear from the company you applied to.");
+    }
+
+    public void SetupRejection()
+    {
+        jobofferwind.SetActive(true);
+        //set buttons
+        confirmButton.SetActive(false);
+        refuseButton.SetActive(false);
+        okButton.SetActive(true);
+        
+        jobWindTitle.text = "Important information about your application";
+        joboffertext.text = string.Format(@"Thank you for applying to our company. Unfortunately, we won't move forward with your application this time.
+                                            We had many talented candidates this year. However, we will keep your information in our system. 
+                                            In the future if we had positions fit your background open, we will keep you in mind.");
+    }
 
     public void ConfirmNewJob()
     {
-        SystemManager.instance.uiManager.CloseJobOfferWindow();
+        jobofferwind.SetActive(false);
         w.ChangeJob(jobls[newjob]);
         SystemManager.instance.DayEnd();
         
@@ -71,7 +118,7 @@ public class JobHunt : MonoBehaviour
 
     public void CancelNewJob()
     {
-        SystemManager.instance.uiManager.CloseJobOfferWindow();
+        jobofferwind.SetActive(false);
         SystemManager.instance.DayEnd();
     }
 
