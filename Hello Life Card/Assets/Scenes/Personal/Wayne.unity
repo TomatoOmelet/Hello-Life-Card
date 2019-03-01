@@ -1909,7 +1909,7 @@ MonoBehaviour:
   shrinkSpeed: 0.02
   rotateSpeed: 1
   particleRotateSpeed: 1
-  particleNum: 5
+  particleNum: 6
   particle: {fileID: 3378425948009235415, guid: 2fe3a0ffc2f605546b0a8f63e0cf915b,
     type: 3}
   canvas: {fileID: 502236521}
@@ -3446,7 +3446,7 @@ MonoBehaviour:
   shrinkSpeed: 0.02
   rotateSpeed: 1
   particleRotateSpeed: 1
-  particleNum: 5
+  particleNum: 8
   particle: {fileID: 3378425948009235415, guid: 2fe3a0ffc2f605546b0a8f63e0cf915b,
     type: 3}
   canvas: {fileID: 502236521}
@@ -4591,7 +4591,7 @@ MonoBehaviour:
   shrinkSpeed: 0.02
   rotateSpeed: 1
   particleRotateSpeed: 1
-  particleNum: 5
+  particleNum: 7
   particle: {fileID: 3378425948009235415, guid: 2fe3a0ffc2f605546b0a8f63e0cf915b,
     type: 3}
   canvas: {fileID: 502236521}
@@ -5107,7 +5107,7 @@ MonoBehaviour:
   shrinkSpeed: 0.02
   rotateSpeed: 1
   particleRotateSpeed: 1
-  particleNum: 5
+  particleNum: 9
   particle: {fileID: 3378425948009235415, guid: 2fe3a0ffc2f605546b0a8f63e0cf915b,
     type: 3}
   canvas: {fileID: 502236521}
