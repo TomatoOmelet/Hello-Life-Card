@@ -35,14 +35,13 @@ public class ContactsManager : MonoBehaviour
     public void DeleteContacts(int index)
     {
         //delete
-        if(contactsList[index].trust < trustToSacrifice)
-        {
-            unusedContacts.Add(contactsList[index].data);
-            contactsList.RemoveAt(index);
-        }else{//sacrifice
-            
-            StartCoroutine(Sacrifice(index));
-        }
+        unusedContacts.Add(contactsList[index].data);
+        contactsList.RemoveAt(index);      
+    }
+
+    public void SacrificeContacts(int index)
+    {
+        StartCoroutine(Sacrifice(index));
     }
 
     public IEnumerator Sacrifice(int index)

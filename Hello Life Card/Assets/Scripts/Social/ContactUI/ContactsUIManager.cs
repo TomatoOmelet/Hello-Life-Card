@@ -41,6 +41,11 @@ public class ContactsUIManager : MonoBehaviour
         UpdateContacts();
     }
 
+    public void SacrificeContacts(int index)
+    {
+        SystemManager.instance.contactsManager.SacrificeContacts(index);
+    }
+
     public void ContactButton(int index)
     {
         CloseContactPanel();
