@@ -69,6 +69,8 @@ public class JobHunt : MonoBehaviour
 
     public void SetupJobOffer(Job j, int? index =null)
     {
+        //reset the reference variable.
+        SystemManager.instance.jobGotByReference = false;
         newjob = index ?? GetJobIndex(j);
         SetupJobOfferWindow(j.jobname, j.jobincome, SystemManager.instance.currentJob.jobname, SystemManager.instance.currentJob.jobincome, j.star);
     }
@@ -155,6 +157,7 @@ public class JobHunt : MonoBehaviour
     public void ReferJob(Job newJob)
     {
         SetupJobOffer(newJob);
+        SystemManager.instance.jobGotByReference = true;
     }
 
     public int GetJobIndex(Job job)

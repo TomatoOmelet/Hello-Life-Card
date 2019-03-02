@@ -56,7 +56,7 @@ public class ContactsManager : MonoBehaviour
         Dialogue dialogue = new Dialogue("", "After Sacrificing " + contactData.name + " to Uncle Dead, you get a life card fragment. You used to be best friends...");
         yield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);
         //lose job if you get your job from this contacts
-        if(SystemManager.instance.currentJob == contactData.job){
+        if(SystemManager.instance.currentJob == contactData.job && SystemManager.instance.jobGotByReference){
             Dialogue loseJobDialogue = new Dialogue("", "You work at the same place as "+ contactData.name +". Your coworkers feel suspicious that " + contactData.name +" disappeared. You have no choice but left the company. You are unemployed now.");
             workManager.ChangeJob(unemployed);
             yield return SystemManager.instance.dialogueManager.DisplaySentence(loseJobDialogue);
