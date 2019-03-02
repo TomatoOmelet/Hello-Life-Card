@@ -16,8 +16,7 @@ public class SystemUIManager : MonoBehaviour
     public TextMeshProUGUI intelligenceChangePromptText;
     public TextMeshProUGUI moneyChangePromptText;
     public TextMeshProUGUI jobInfoText;
-    public TextMeshProUGUI joboffertext;
-    public GameObject jobofferwind;
+
 
     //update UI elements
     public void UpdateIntelligenceUI(int intelligence)
