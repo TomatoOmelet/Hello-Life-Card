@@ -16,7 +16,7 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
         //SystemManager.instance.playerMoney = 2000;
-
+       // SystemManager.instance.playerMoney = 2500;
       //Debug.Log(SystemManager.instance.playerMoney);
         items.Add("Textbook", getTextbook);
         items.Add("Fancy Desk", studyRate);
@@ -156,42 +156,42 @@ public class ShopManager : MonoBehaviour
       Debug.Log("got here " + itemName);
         if (itemName == "Textbook")
         {
-        //  Debug.Log("this is dumb");
+            //  Debug.Log("this is dumb");
             yield return display(new Dialogue("", "After receiving a textbook, you feel like you've gotten smarter"));
             items[itemName]();
             StartCoroutine(AddScore(30));
         }
-       else if(itemName =="Fancy Desk")
+        else if (itemName == "Fancy Desk")
         {
-        //  Debug.Log("this is fancy desk");
-             yield return display(new Dialogue("", "With a new desk, you will be better at studying"));
+            //  Debug.Log("this is fancy desk");
+            yield return display(new Dialogue("", "With a new desk, you will be better at studying"));
             items[itemName]();
         }
-        else if(itemName =="Fancy Cell Phone")
+        else if (itemName == "Fancy Cell Phone")
         {
-        //  Debug.Log("this is fancy cell phone");
+            //  Debug.Log("this is fancy cell phone");
             yield return null; //display(new Dialogue "", "")
             items[itemName]();
         }
-        else if (itemName =="Lottery Ticket")
+        else if (itemName == "Lottery Ticket")
         {
-        //  Debug.Log("this is Lottery Ticket");
+            //  Debug.Log("this is Lottery Ticket");
             yield return display(new Dialogue("", "You have received a Normal Lottery Ticket, best of luck!"));
             items[itemName]();
         }
-        else if (itemName =="Fancy Lottery Ticket")
+        else if (itemName == "Fancy Lottery Ticket")
         {
-         // Debug.Log("this is Fancy Lottery Ticket");
+            // Debug.Log("this is Fancy Lottery Ticket");
             yield return display(new Dialogue("", "You have received a Fancy Lottery Ticket, best of luck!"));
             items[itemName]();
         }
-        else if (itemName =="Extreme Lottery Ticket")
+        else if (itemName == "Extreme Lottery Ticket")
         {
-         // Debug.Log("this is Extreme Lottery Ticket");
-            yield return display(new Dialogue("", "You have received a Fancy Lottery Ticket, best of luck!"));
+            // Debug.Log("this is Extreme Lottery Ticket");
+            yield return display(new Dialogue("", "You have received an Extreme Lottery Ticket, best of luck!"));
             items[itemName]();
         }
-        else if (itemName== "Nothing")
+        else if (itemName == "Nothing")
         {
             Debug.Log("this is nothing");
             yield return display(new Dialogue("", "You have gained nothing from this exchange"));
@@ -207,7 +207,7 @@ public class ShopManager : MonoBehaviour
             yield return display(new Dialogue("", "You have received 100 dollars!"));
             AdjustCash(100);
         }
-        else if(itemName == "500")
+        else if (itemName == "500")
         {
             yield return display(new Dialogue("", "You have received 500 dollars!"));
             AdjustCash(500);
@@ -217,6 +217,11 @@ public class ShopManager : MonoBehaviour
         {
             yield return display(new Dialogue("", "You have received 1000 dollars!"));
             AdjustCash(1000);
+        }
+        else if (itemName == "Life Card Fragment")
+        {
+            yield return display(new Dialogue("", "Life is in your grasp"));
+            items[itemName]();
         }
         
         //yield return display(new Dialogue("",""));
