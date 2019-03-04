@@ -16,4 +16,7 @@ MonoBehaviour:
   jobincome: 90
   jobhuntchance: 0.05
   star: 3
-  workmessage: After bossing people around and micromanaging you are paid {0}$
+  workmessage:
+  - After micromanaging your employee's water consumption you are paid {0}$.
+  - After firing some underperforming employees you are rewarded with {0}$.
+  - You oversee the construction of you new private breakroom {0}$.

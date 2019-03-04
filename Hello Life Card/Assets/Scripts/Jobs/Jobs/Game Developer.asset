@@ -16,4 +16,7 @@ MonoBehaviour:
   jobincome: 180
   jobhuntchance: 0.01
   star: 5
-  workmessage: After creating a better game than this one you are paid {0}$
+  workmessage:
+  - You develop a game much better than this one and are paid {0}$.
+  - After debugging your game you are paid {0}$. Afterwards you find some more bugs.
+  - You implement a new game mechanic and go way out of scope and are paid {0}$.

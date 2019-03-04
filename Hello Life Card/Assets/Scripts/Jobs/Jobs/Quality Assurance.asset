@@ -16,4 +16,7 @@ MonoBehaviour:
   jobincome: 160
   jobhuntchance: 0.025
   star: 4
-  workmessage: After spending hours testing and debugging you are paid {0}$
+  workmessage:
+  - After yelling at the programming team for coding terribly you are paid {0}$.
+  - You singlehandedly fix the code of the entire project and are paid {0}$.
+  - After spending all night debugging you are rewarded with {0} for your efforts$.

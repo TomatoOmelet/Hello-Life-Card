@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddbbfc9dab70af44fb4840955544eced, type: 3}
   m_Name: YouTuber
   m_EditorClassIdentifier: 
-  jobname: YouTuber
+  jobname: Streamer
   jobincome: 300
   jobhuntchance: 0.01
   star: 5
-  workmessage: After Several hours of talking about random things you are paid {0}$
+  workmessage:
+  - After complaining about some games you recieve {0}$.
+  - After running 10 ads every 10 seconds you gain {0}$.
+  - After losing your soul and becoming a slave to the companies whims you recieve
+    {0}$.

@@ -16,5 +16,7 @@ MonoBehaviour:
   jobincome: 70
   jobhuntchance: 0.05
   star: 3
-  workmessage: After several hours at the till the shift is over and you are paid
-    {0}$
+  workmessage:
+  - After dealing with an angry customer all day you are paid {0}$.
+  - You peacefully count money all day and are paid {0}$.
+  - You sneak into work at night and steal {0}$ from the register.

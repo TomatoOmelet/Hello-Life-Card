@@ -16,4 +16,8 @@ MonoBehaviour:
   jobincome: 250
   jobhuntchance: 0.01
   star: 5
-  workmessage: After tearing apart another restaurant, you are paid {0}$
+  workmessage:
+  - After tearing apart another restaurant you are paid {0}$.
+  - You roast a restuarnt and are rewarded with {0}$.
+  - After taking a bribe you give a restaurant a rather scalding review, you recieve
+    {0}$.

@@ -16,4 +16,7 @@ MonoBehaviour:
   jobincome: 110
   jobhuntchance: 0.025
   star: 3
-  workmessage: After organizing bouquets for hours you are paid {0}$
+  workmessage:
+  - After rating the smell of each flower for several hours you are paid {0}$.
+  - After murdering flowers for all day you are paid {0}$.
+  - You wrap up large bouquets for a few hours and are given {0}$.

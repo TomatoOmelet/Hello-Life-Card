@@ -26,7 +26,7 @@ public class Work : MonoBehaviour
         //Continue as normal if they do not have 0 income
         if (SystemManager.instance.currentJob.jobincome != 0)
         {
-            Dialogue d = new Dialogue("", string.Format(SystemManager.instance.currentJob.workmessage, Income()));
+            Dialogue d = new Dialogue("", string.Format(SystemManager.instance.currentJob.workmessage[Random.Range(0,SystemManager.instance.currentJob.workmessage.Count)], Income()));
             yield return SystemManager.instance.dialogueManager.DisplaySentence(d);
             int income = Income();
             StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.moneyText, income));

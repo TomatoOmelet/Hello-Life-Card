@@ -16,4 +16,7 @@ MonoBehaviour:
   jobincome: 0
   jobhuntchance: 0
   star: 3
-  workmessage: You do nothing...
+  workmessage:
+  - Test{0}$.
+  - Test{0}$.
+  - Test{0}$.

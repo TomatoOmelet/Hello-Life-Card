@@ -16,4 +16,8 @@ MonoBehaviour:
   jobincome: 140
   jobhuntchance: 0.02
   star: 4
-  workmessage: After helping someone who deleted System32 you are paid {0}$
+  workmessage:
+  - After helping someone who deleted system32 you are paid {0}$.
+  - After deleting nearly a gigabyte of malware off a laptop of someone who thought
+    they won an a free laptop, you recieve {0}$.
+  - After cleaning questionable files off your boss's computer you are paid {0}$.

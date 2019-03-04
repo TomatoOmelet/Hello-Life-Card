@@ -16,4 +16,8 @@ MonoBehaviour:
   jobincome: 50
   jobhuntchance: 0.05
   star: 3
-  workmessage: After hours of frying hamburgers and fries you are paid {0}$
+  workmessage:
+  - After frying burgers and fries until you swear your own fingers are french fries
+    you are paid {0}$.
+  - After converting some silicon into edible meat you are paid {0}$.
+  - After serving a kind old man he tips you {0}$.
