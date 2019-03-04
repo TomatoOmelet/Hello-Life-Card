@@ -756,6 +756,8 @@ MonoBehaviour:
   contactSucceedRate: 0.75
   trustIncreasedEachContact: 15
   jobHunt: {fileID: 1631335007}
+  workManager: {fileID: 0}
+  unemployed: {fileID: 0}
 --- !u!114 &162111975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,8 +778,6 @@ MonoBehaviour:
   intelligenceChangePromptText: {fileID: 761008317}
   moneyChangePromptText: {fileID: 1070406506}
   jobInfoText: {fileID: 1591541303}
-  joboffertext: {fileID: 1647075138}
-  jobofferwind: {fileID: 531696983}
 --- !u!114 &162111976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,6 +791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentJob: {fileID: 11400000, guid: 73be3f2a20fe4e44b80f51415de59829, type: 2}
+  jobGotByReference: 0
   uiManager: {fileID: 162111975}
   dialogueManager: {fileID: 552918115}
   contactsManager: {fileID: 162111974}
@@ -7572,6 +7573,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 26f7b992408dedd43a809b1c27631189, type: 2}
   intelratio: 0.03
   w: {fileID: 1631335008}
+  jobofferwind: {fileID: 0}
+  joboffertext: {fileID: 0}
+  jobWindTitle: {fileID: 0}
+  confirmButton: {fileID: 0}
+  refuseButton: {fileID: 0}
+  okButton: {fileID: 0}
+  stars: []
 --- !u!114 &1631335008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9392,7 +9400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2081277651
 RectTransform:
   m_ObjectHideFlags: 0
