@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Study : MonoBehaviour
 {
-    
+    [SerializeField]private List<string> msgs;
 
     public void StudyButton()
     {
@@ -15,7 +15,7 @@ public class Study : MonoBehaviour
     {
         int intelligence = IntelligenceIncrease();
         //construc the sentence displayed before 
-        Dialogue dialogue = new Dialogue("", "After studying hard, your intelligence increases by " + intelligence + " .");
+        Dialogue dialogue = new Dialogue("", string.Format(msgs[Random.Range(0,msgs.Count)],intelligence));
         yield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);
         StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.intelligenceText, intelligence));
         SystemManager.instance.DayEnd();

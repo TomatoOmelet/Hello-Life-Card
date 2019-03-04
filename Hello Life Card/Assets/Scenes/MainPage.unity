@@ -12184,6 +12184,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b51cb17b227da47a1477a3a3048715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  msgs:
+  - After spending several hours banging your head against the wall you gain {0} intelligence.
+  - After writing several essays overnight you gain {0} intelligence.
+  - After typing code until your fingers ache, you gain {0} intelligence.
+  - After practicing basic cooking until you have several burns you gain {0} intelligence.
+  - After pulling an all nighter studying flowers you gain {0} intelligence.
 --- !u!114 &1777911690
 MonoBehaviour:
   m_ObjectHideFlags: 0
