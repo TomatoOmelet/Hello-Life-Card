@@ -21,6 +21,7 @@ public class SystemManager : MonoBehaviour
     private Season season = Season.Spring;
     private int week = 1;
     public Job currentJob;
+    public bool jobGotByReference = false;
     
 
     //object needed

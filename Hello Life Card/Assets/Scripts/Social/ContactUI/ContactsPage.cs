@@ -7,10 +7,9 @@ public class ContactsPage : MonoBehaviour
 {
     public Text nameText;
     public Text trustText;
+    public Text jobText;
 
-    public Image deleteButtonImage;
-    public Color deleteButtonColor;
-    public Text deleteText;
+    public GameObject sacrificeButton;
 
 
     // Update is called once per frame
@@ -18,14 +17,13 @@ public class ContactsPage : MonoBehaviour
     {
         nameText.text = contacts.data.name;
         trustText.text = "Trust: " + contacts.trust;
+        jobText.text = "Work as: " + contacts.data.job.jobname;
         //if trust is enough, Delete becom sacrifice
         if(contacts.trust >= SystemManager.instance.contactsManager.trustToSacrifice)
         {
-            deleteButtonImage.color = Color.red;
-            deleteText.text = "Sacrifice";
+            sacrificeButton.SetActive(true);
         }else{
-            deleteButtonImage.color = deleteButtonColor;
-            deleteText.text = "Delete";
+            sacrificeButton.SetActive(false);
         }
     }
 }

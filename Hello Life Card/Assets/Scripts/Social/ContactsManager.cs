@@ -12,6 +12,8 @@ public class ContactsManager : MonoBehaviour
     public int trustIncreasedEachContact = 15;
     private int contactsSacrificed = 0;
     public JobHunt jobHunt;
+    public Work workManager;
+    public Job unemployed;
     // Start is called before the first frame update
 
     void Awake()
@@ -33,25 +35,31 @@ public class ContactsManager : MonoBehaviour
     public void DeleteContacts(int index)
     {
         //delete
-        if(contactsList[index].trust < trustToSacrifice)
-        {
-            unusedContacts.Add(contactsList[index].data);
-            contactsList.RemoveAt(index);
-        }else{//sacrifice
-            
-            StartCoroutine(Sacrifice(index));
-        }
+        unusedContacts.Add(contactsList[index].data);
+        contactsList.RemoveAt(index);      
+    }
+
+    public void SacrificeContacts(int index)
+    {
+        StartCoroutine(Sacrifice(index));
     }
 
     public IEnumerator Sacrifice(int index)
     {
+        ContactsData contactData = contactsList[index].data;
         contactsList.RemoveAt(index);
         ++contactsSacrificed;
         //close panel
         GameObject.FindObjectOfType<ContactsUIManager>().CloseContactPanel();
         //display sentence
-        Dialogue dialogue = new Dialogue("", "After Sacrificing your friend to Uncle Dead, you get a life card fragment. They used to be your best friend...");
+        Dialogue dialogue = new Dialogue("", "After Sacrificing " + contactData.name + " to Uncle Dead, you get a life card fragment. You used to be best friends...");
         yield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);
+        //lose job if you get your job from this contacts
+        if(SystemManager.instance.currentJob == contactData.job && SystemManager.instance.jobGotByReference){
+            Dialogue loseJobDialogue = new Dialogue("", "You work at the same place as "+ contactData.name +". Your coworkers feel suspicious that " + contactData.name +" disappeared. You have no choice but left the company. You are unemployed now.");
+            workManager.ChangeJob(unemployed);
+            yield return SystemManager.instance.dialogueManager.DisplaySentence(loseJobDialogue);
+        }
         SystemManager.instance.playerLifeCardFragment++;
     }
 
