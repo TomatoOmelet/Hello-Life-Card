@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public enum Season
 {
@@ -50,6 +51,12 @@ public class SystemManager : MonoBehaviour
             }
     }
 
+    //seanson UI
+    public Image windowImage;
+    public Sprite[] seasonWindowSprites;
+    public Image treeImage;
+    public Sprite[] seasonTreeSprites;
+
     void Awake()
     {
         //singleton
@@ -65,6 +72,8 @@ public class SystemManager : MonoBehaviour
     void Start()
     {
         InitializeUI();
+        windowImage.sprite = seasonWindowSprites[0];
+        treeImage.sprite = seasonTreeSprites[0];
     }
 
     //update all UIelements using current value
@@ -98,6 +107,24 @@ public class SystemManager : MonoBehaviour
         {
             week = 1;
             season = (Season)((int)season + 1);
+            //change season sprite
+            switch(season)
+            {
+                case Season.Summer:{
+                    windowImage.sprite = seasonWindowSprites[1];
+                    treeImage.sprite = seasonTreeSprites[1];
+                    break;}
+                case Season.Fall:{
+                    windowImage.sprite = seasonWindowSprites[2];
+                    treeImage.sprite = seasonTreeSprites[2];
+                    break;}
+                case Season.Winter:{
+                    windowImage.sprite = seasonWindowSprites[3];
+                    treeImage.sprite = seasonTreeSprites[3];
+                    break;}
+                default:
+                    break;
+            }
         }
         //update ui
         uiManager.UpdateWeekUI(week);

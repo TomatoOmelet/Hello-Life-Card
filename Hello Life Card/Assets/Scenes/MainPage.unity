@@ -2270,6 +2270,18 @@ MonoBehaviour:
   uiManager: {fileID: 184403545}
   dialogueManager: {fileID: 1498940799}
   contactsManager: {fileID: 184403544}
+  windowImage: {fileID: 365287369}
+  seasonWindowSprites:
+  - {fileID: 21300000, guid: c2bf1c8e9c3497c42af8f11476963b6e, type: 3}
+  - {fileID: 21300000, guid: c39ba02825874024b9177aa1391771df, type: 3}
+  - {fileID: 21300000, guid: 642a53ff2b212514384897dbd5561a3f, type: 3}
+  - {fileID: 21300000, guid: 42c6652bcba90e6448993185f9ecfc3d, type: 3}
+  treeImage: {fileID: 476790943}
+  seasonTreeSprites:
+  - {fileID: 21300000, guid: d89d77d8745e9484e8e8d0d92e7b1cf9, type: 3}
+  - {fileID: 21300000, guid: 7abcca375a552724e9565ecd860ed6cb, type: 3}
+  - {fileID: 21300000, guid: 66bffefbecd7b6b4cac8e2ad581c3d61, type: 3}
+  - {fileID: 21300000, guid: 9e94b823b25be4d4ab3c5d8954462fa6, type: 3}
 --- !u!4 &184403547
 Transform:
   m_ObjectHideFlags: 0
@@ -10449,7 +10461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041151032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -41, y: -33.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1125917726}
@@ -20199,7 +20211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19, y: 40}
+  m_AnchoredPosition: {x: 65, y: 57}
   m_SizeDelta: {x: 222, y: 103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2045156458
