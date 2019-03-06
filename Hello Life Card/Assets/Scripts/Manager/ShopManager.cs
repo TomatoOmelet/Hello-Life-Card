@@ -260,6 +260,7 @@ public IEnumerator AddScore(int value)
        
        //ield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);
         StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.intelligenceText, value));
+        
         yield return null;
       //StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.intelligenceText, value));
         //syield return SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.intelligenceText, value);
@@ -278,6 +279,7 @@ public IEnumerator AddScore(int value)
         
             //UPDATE UI
         StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.moneyText, value));
+
         // yield return null;
        
 

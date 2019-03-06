@@ -109,13 +109,25 @@ public class SystemUIManager : MonoBehaviour
             SystemManager.instance.playerIntelligence += value;
         //SystemManager.instance.uiManager.PromptIntelligenceChange(value);
         //add numbers one by one
-        for(int x = 0; x< value; ++x)
+        if(value >= 0)
         {
-            if(text == moneyText)
-                UpdateMoneyUI(++uiMoney);
-            else
-                UpdateIntelligenceUI(++uiIntelligence);
-            yield return null;
+            for(int x = 0; x< value; ++x)
+            {
+                if(text == moneyText)
+                    UpdateMoneyUI(++uiMoney);
+                else
+                    UpdateIntelligenceUI(++uiIntelligence);
+                yield return null;
+            }
+        }else{//reduce 
+            for(int x = 0; x< -value; ++x)
+            {
+                if(text == moneyText)
+                    UpdateMoneyUI(--uiMoney);
+                else
+                    UpdateIntelligenceUI(--uiIntelligence);
+                yield return null;
+            }
         }
     }
 
