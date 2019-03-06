@@ -2265,7 +2265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0478a921d9f344e824cac9bd859ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentJob: {fileID: 11400000, guid: 26f7b992408dedd43a809b1c27631189, type: 2}
+  currentJob: {fileID: 11400000, guid: 73be3f2a20fe4e44b80f51415de59829, type: 2}
   jobGotByReference: 0
   uiManager: {fileID: 184403545}
   dialogueManager: {fileID: 1498940799}
