@@ -77,7 +77,7 @@ public class ShopManager : MonoBehaviour
             string itemname = itemNC.Substring(i + 1);
 
             
-            StartCoroutine(handleDialog(itemname));
+            SystemManager.instance.StartCoroutine(handleDialog(itemname));
             
 
             //items[itemNC.Substring(i + 1)]();
@@ -87,7 +87,7 @@ public class ShopManager : MonoBehaviour
         else
         {
             
-            StartCoroutine(display(new Dialogue("", "Unfortunately, you don't have the proper funding")));
+            SystemManager.instance.StartCoroutine(display(new Dialogue("", "Unfortunately, you don't have the proper funding")));
             //have a popup that says something to the effect of not enough money
         }
         //buys the item associated with the button
@@ -120,7 +120,7 @@ public class ShopManager : MonoBehaviour
     {
         //StartCoroutine(display(new Dialogue("", "You have received a Normal Lottery Ticket, best of luck!")));
         string str = lottery.GenerateCPrize();
-        StartCoroutine(handleDialog(str));
+        SystemManager.instance.StartCoroutine(handleDialog(str));
         //items[str]();
     }
     
@@ -129,7 +129,7 @@ public class ShopManager : MonoBehaviour
     {
         //StartCoroutine(display(new Dialogue("", "You have received a Fancy Lottery Ticket, best of luck!")));
         string str = lottery.GenerateBPrize();
-        StartCoroutine(handleDialog(str));
+        SystemManager.instance.StartCoroutine(handleDialog(str));
         //items[str]();
         
     }
@@ -142,7 +142,7 @@ public class ShopManager : MonoBehaviour
     {
         //StartCoroutine(display(new Dialogue("", "You have received an Extreme Lottery Ticket, best of luck!")));
         string str = lottery.GenerateAPrize();
-        StartCoroutine(handleDialog(str));
+        SystemManager.instance.StartCoroutine(handleDialog(str));
         //items[str]();
     }
     private void addLifeCardFragment()
@@ -159,7 +159,7 @@ public class ShopManager : MonoBehaviour
             //  Debug.Log("this is dumb");
             yield return display(new Dialogue("", "After receiving a textbook, you feel like you've gotten smarter"));
             items[itemName]();
-            StartCoroutine(AddScore(30));
+            SystemManager.instance.StartCoroutine(AddScore(30));
         }
         else if (itemName == "Fancy Desk")
         {
@@ -245,7 +245,7 @@ public IEnumerator IntelIncrease(int amount,Dialogue dialogue)
     
     //construc the sentence displayed before 
     yield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);
-    StartCoroutine(AddScore(amount));
+    SystemManager.instance.StartCoroutine(AddScore(amount));
 }
 
 
@@ -259,7 +259,7 @@ public IEnumerator AddScore(int value)
         //construc the sentence displayed before 
        
        //ield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);
-        StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.intelligenceText, value));
+        SystemManager.instance.StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.intelligenceText, value));
         
         yield return null;
       //StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.intelligenceText, value));
@@ -278,7 +278,7 @@ public IEnumerator AddScore(int value)
         
         
             //UPDATE UI
-        StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.moneyText, value));
+        SystemManager.instance.StartCoroutine(SystemManager.instance.uiManager.AddValueToUI(SystemManager.instance.uiManager.moneyText, value));
 
         // yield return null;
        
