@@ -17,5 +17,6 @@ MonoBehaviour:
   trustForJob: 80
   socializeSentence: You want to become my friend? Interesting~ Cannot wait to betray
     you after we become close friend~
-  trustIncreaseSentence: Oh, we are closer now~ Closer to Top Ten Anima Betrayal~~~
+  trustIncreaseSentences:
+  - Oh, we are closer now~ Closer to Top Ten Anima Betrayal~~~
   referSentence: I want to fire you, but I guess you need to work in my company first~

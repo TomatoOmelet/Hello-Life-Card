@@ -18,8 +18,8 @@ MonoBehaviour:
   socializeSentence: Oh, your shadow..... Hmmm, I see, what a poor human. You are
     cursed by the moon. Guess I will need to stay around you to prevent you from being
     killed.
-  trustIncreaseSentence: I sense some evil power. It seems I need to leave now. Don't
-    follow me, you should live a peaceful life like a human. I'm sure we will meet
-    again.
+  trustIncreaseSentences:
+  - "I sense some evil power. It seems I need to leave now. Don't follow me, you should
+    live a peaceful life like a human. I'm sure we will meet\r again."
   referSentence: You struggled to live until today. Maybe you are not only a common
     human you seem to be. If you wish, you can fight with me to save this world.

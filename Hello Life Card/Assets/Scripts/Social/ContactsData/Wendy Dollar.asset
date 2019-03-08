@@ -17,5 +17,6 @@ MonoBehaviour:
   trustForJob: 25
   socializeSentence: 'You have ordered four for four for four days, guess you really
     like it. My name is Wendy. '
-  trustIncreaseSentence: Haha. The way you bite crispy chicken sandwich is so interesting.
+  trustIncreaseSentences:
+  - Haha. The way you bite crispy chicken sandwich is so interesting.
   referSentence: You should make four for four for poor college student with me.

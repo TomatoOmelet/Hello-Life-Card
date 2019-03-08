@@ -10,6 +10,6 @@ public class ContactsData : ScriptableObject
     public int trustForJob;
     
     [TextArea(2,5)]public string socializeSentence;
-    [TextArea(2,5)]public string trustIncreaseSentence;
+    [TextArea(2,5)]public string[] trustIncreaseSentences;
     [TextArea(2,5)]public string referSentence;
 }

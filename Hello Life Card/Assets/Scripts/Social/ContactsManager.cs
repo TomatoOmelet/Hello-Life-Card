@@ -68,7 +68,8 @@ public class ContactsManager : MonoBehaviour
         //success
         if(Random.Range(0, 1f) < contactSucceedRate)
         {
-            Dialogue successDialogue = new Dialogue(contactsList[index].data.name, contactsList[index].data.trustIncreaseSentence);
+            string[] successDialogueList = contactsList[index].data.trustIncreaseSentences;
+            Dialogue successDialogue = new Dialogue(contactsList[index].data.name, successDialogueList[Random.Range(0, successDialogueList.Length)]);
             yield return SystemManager.instance.dialogueManager.DisplaySentence(successDialogue);
             //increase trust
             contactsList[index].trust += trustIncreasedEachContact;

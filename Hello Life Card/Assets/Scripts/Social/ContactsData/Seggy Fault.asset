@@ -17,7 +17,7 @@ MonoBehaviour:
   trustForJob: 60
   socializeSentence: The programmers in my company wrote so many bugs. I hope all
     of them die. You wish for the same thing right? Become my friend.
-  trustIncreaseSentence: My manager is so useless. I hope she dies. Thank you for
-    listening to my complain.
+  trustIncreaseSentences:
+  - "My manager is so useless. I hope she dies. Thank you for\r listening to my complain.\r"
   referSentence: My company is so bad and should go bankrupt. But if you become my
     coworker maybe it will be a fine place to work at.

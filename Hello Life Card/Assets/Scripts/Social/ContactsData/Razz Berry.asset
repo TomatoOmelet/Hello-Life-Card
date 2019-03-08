@@ -16,6 +16,7 @@ MonoBehaviour:
   job: {fileID: 11400000, guid: 26f7b992408dedd43a809b1c27631189, type: 2}
   trustForJob: 90
   socializeSentence: Hey, you're pretty cool! We should hang out more!
-  trustIncreaseSentence: I'm happy to have met you. Thanks for being such a good friend!
+  trustIncreaseSentences:
+  - I'm happy to have met you. Thanks for being such a good friend!
   referSentence: I think you'd be a great Youtuber. You'd gain an audience in no time!
     What do you say?
