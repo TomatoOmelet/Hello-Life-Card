@@ -18,7 +18,6 @@ MonoBehaviour:
   socializeSentence: Are you learning Unity? You can come to my programming workshop
     if you need help :)
   trustIncreaseSentences:
-  - "You learn very fast. Keep working hard. You can ask me anytime\r if you meet
-    a problem :D\r"
+  - "You learn very fast. Keep working hard. You can ask me anytime if you meet a problem :D"
   referSentence: You are a talented person. You should work with me at Bmazon Game
     Studio XD
