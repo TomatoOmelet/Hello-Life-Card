@@ -18,4 +18,6 @@ MonoBehaviour:
   socializeSentence: House House House, House House.
   trustIncreaseSentences:
   - House, House House.
+  - House, House? House House House.
+  - House House. House House House. House House House...... House, House House.
   referSentence: HOUSUU!
