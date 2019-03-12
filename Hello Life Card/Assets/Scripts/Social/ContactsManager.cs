@@ -87,7 +87,7 @@ public class ContactsManager : MonoBehaviour
                 Dialogue[] resultsdialogue = new Dialogue[3];
                 for(int i = 3*questionindex; i < 3*(questionindex+1); i++)
                 {
-                    print(i);
+
                     resultsdialogue[i] = new Dialogue(contactsList[index].data.name, results[i]);
                     if (questions[i] != "")
                     {
@@ -95,7 +95,7 @@ public class ContactsManager : MonoBehaviour
                     }
                 }
                 yield return SystemManager.instance.dialogueManager.DisplayQuestion(questiondialogue, contactsList[index].data.options, resultsdialogue);
-                contactsList[index].trust += contactsList[index].data.resultingtrust[SystemManager.instance.dialogueManager.option*questionindex];
+                contactsList[index].trust += contactsList[index].data.resultingtrust[SystemManager.instance.dialogueManager.option+(questionindex*3)];
 
             }
 
