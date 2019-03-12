@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UncleDeathHints : MonoBehaviour
 {
-    [SerializeField] private string[] dialoguetext;
+    public string[] dialoguetext;
     [SerializeField] private string speaker = "Uncle Death";
     private int startpos=0;
     private int endpos=0;
