@@ -9,6 +9,11 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueBox;
     public TextMeshProUGUI dialogueText;
     public Dialogue dialogue;
+    public TextMeshProUGUI Option1;
+    public TextMeshProUGUI Option2;
+    public TextMeshProUGUI Option3;
+    public int option = -1;
+    public GameObject HideButtons;
     
 
     //all showSentence will start the DisplayMultipleSentencesRoutine
@@ -53,6 +58,46 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = head + dialogue.content;
     }
 
+    public IEnumerator DisplayQuestion(Dialogue[] dialogues, string[] options, Dialogue[] results)
+    {
+      
+        yield return DisplaySentence(dialogues);
+
+        ShowOptions(options);
+
+        yield return GetOption();
+
+        HideOptions();
+
+        yield return DisplaySentence(results[option]);
+        option = -1;
+        
+        
+
+    }
+    
+    private IEnumerator GetOption()
+    {
+        while (option == -1)
+        {
+            yield return null;
+        }
+    }
+
+    private void HideOptions()
+    {
+        HideButtons.SetActive(false);
+    }
+
+    private void ShowOptions(string[] options)
+    {
+        HideButtons.SetActive(true);
+        Option1.text = options[0];
+        Option2.text = options[1];
+        Option3.text = options[2];
+
+    }
+
     private void ShowDialogueBox()
     {
         dialogueBox.SetActive(true);
@@ -61,6 +106,11 @@ public class DialogueManager : MonoBehaviour
     private void HideDialogueBox()
     {
         dialogueBox.SetActive(false);
+    }
+
+    public void SetOption(int i)
+    {
+        option = i;
     }
 
 }
