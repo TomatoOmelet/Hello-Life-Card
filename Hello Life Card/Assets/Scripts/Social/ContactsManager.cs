@@ -80,21 +80,24 @@ public class ContactsManager : MonoBehaviour
             {
                 //Handles questions
                 string[] questions = contactsList[index].data.questions;
-                int questionindex = questions.Length % 3;
+                int questionindex = questions.Length / 3;
+                print(questionindex);
                 questionindex = Random.Range(0, questionindex);
                 string[] results = contactsList[index].data.results;
                 List<Dialogue> questiondialogue = new List<Dialogue>();
                 Dialogue[] resultsdialogue = new Dialogue[3];
+                string[] options = new string[3];
                 for(int i = 3*questionindex; i < 3*(questionindex+1); i++)
                 {
-
-                    resultsdialogue[i] = new Dialogue(contactsList[index].data.name, results[i]);
+                   
+                    resultsdialogue[(i-3*questionindex)] = new Dialogue(contactsList[index].data.name, results[i]);
+                    options[(i - 3 * questionindex)] = contactsList[index].data.options[i];
                     if (questions[i] != "")
                     {
                         questiondialogue.Add(new Dialogue(contactsList[index].data.name, questions[i]));
                     }
                 }
-                yield return SystemManager.instance.dialogueManager.DisplayQuestion(questiondialogue, contactsList[index].data.options, resultsdialogue);
+                yield return SystemManager.instance.dialogueManager.DisplayQuestion(questiondialogue, options, resultsdialogue);
                 contactsList[index].trust += contactsList[index].data.resultingtrust[SystemManager.instance.dialogueManager.option+(questionindex*3)];
 
             }

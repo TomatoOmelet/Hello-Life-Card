@@ -29,8 +29,8 @@ MonoBehaviour:
   questions:
   - Pop Quiz :)
   - What type of collision is not handled by Unity?
-  - ' Dynamic rigid bodies, with kinematic rigid bodies, dynamic rigid bodies and
-    static colliders, or kinematic rigid bodies and static colliders?'
+  - ' Dynamic rigid bodies with kinematic rigid bodies, dynamic rigid bodies and static
+    colliders, or kinematic rigid bodies and static colliders?'
   - Pop Quiz :)
   - What does MVP stand for?
   - 
