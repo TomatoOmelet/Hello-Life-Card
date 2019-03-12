@@ -139,7 +139,12 @@ public class SystemManager : MonoBehaviour
         {
             StartCoroutine(EndDeath());
         }else{//end2: life
-            StartCoroutine(EndLife());
+            if(contactsManager.GetContactSacrificedNum() > 0)
+            {
+                StartCoroutine(EndEvil());
+            }else{
+                StartCoroutine(EndLife());
+            }
         }
     }
 
@@ -148,6 +153,16 @@ public class SystemManager : MonoBehaviour
         Dialogue dialogue1 = new Dialogue("", "After four seasons, you still didn't get a life card. Uncle Dead took your life.");
         Dialogue dialogue2 = new Dialogue("", "Bad End.");
         yield return dialogueManager.DisplaySentence(new Dialogue[]{dialogue1, dialogue2});
+        BackToMenu();
+    }
+
+    public IEnumerator EndEvil()
+    {
+        Dialogue dialogue1 = new Dialogue("", "To get a life card, you even sacrificed your best friend.");
+        Dialogue dialogue2 = new Dialogue("", "In the end, you get your life card, and give it to Uncle Death to exchange for your life.");
+        Dialogue dialogue3 = new Dialogue("", "However, weird things start to happen around you. You always hear your died friends crying in the night.");
+        Dialogue dialogue4 = new Dialogue("", "Haunted End.");
+        yield return dialogueManager.DisplaySentence(new Dialogue[]{dialogue1, dialogue2, dialogue3, dialogue4});
         BackToMenu();
     }
 

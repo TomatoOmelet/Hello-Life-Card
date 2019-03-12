@@ -120,4 +120,9 @@ public class ContactsManager : MonoBehaviour
         }
     }
 
+    public int GetContactSacrificedNum()
+    {
+        return contactsSacrificed;
+    }
+
 }
