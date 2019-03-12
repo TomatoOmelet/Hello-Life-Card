@@ -23,3 +23,16 @@ MonoBehaviour:
   - You cannot believe your friends. We only made friends with you so we can betray
     you~
   referSentence: I want to fire you, but I guess you need to work in my company first~
+  questions:
+  - yo
+  - 
+  - 
+  options:
+  - y
+  - yy
+  - yyy
+  results:
+  - yoy
+  - yoyy
+  - yoyyy
+  resultingtrust: 190000000f000000f6ffffff

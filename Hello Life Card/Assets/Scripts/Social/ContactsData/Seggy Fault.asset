@@ -24,3 +24,18 @@ MonoBehaviour:
   - Let's curse the uesless programmers at my company, so they can disappear forever.
   referSentence: My company is so bad and should go bankrupt. But if you become my
     coworker maybe it will be a fine place to work at.
+  questions:
+  - I have a complain. All my coworkers cannot do anything.
+  - I want them to get fired but what should I do?
+  - 
+  options:
+  - Don't get them fired!?
+  - Program an Ai to kill them and be a better programmer
+  - Blackmail their boss who is playing games all the time.
+  results:
+  - You are horrible too?
+  - Good idea, I will replace everyone with better AI programmers now, and then there
+    will be no more bugs.
+  - He is horrible too, but he can fire them, so I can use him and get him fired too
+    later.
+  resultingtrust: ecffffff190000000f000000

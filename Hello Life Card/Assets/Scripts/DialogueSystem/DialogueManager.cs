@@ -58,9 +58,9 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = head + dialogue.content;
     }
 
-    public IEnumerator DisplayQuestion(Dialogue[] dialogues, string[] options, Dialogue[] results)
+    public IEnumerator DisplayQuestion(List<Dialogue> dialogues, string[] options, Dialogue[] results)
     {
-      
+        option = -1;
         yield return DisplaySentence(dialogues);
 
         ShowOptions(options);
@@ -70,7 +70,7 @@ public class DialogueManager : MonoBehaviour
         HideOptions();
 
         yield return DisplaySentence(results[option]);
-        option = -1;
+        
         
         
 

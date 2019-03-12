@@ -68,11 +68,37 @@ public class ContactsManager : MonoBehaviour
         //success
         if(Random.Range(0, 1f) < contactSucceedRate)
         {
-            string[] successDialogueList = contactsList[index].data.trustIncreaseSentences;
-            Dialogue successDialogue = new Dialogue(contactsList[index].data.name, successDialogueList[Random.Range(0, successDialogueList.Length)]);
-            yield return SystemManager.instance.dialogueManager.DisplaySentence(successDialogue);
-            //increase trust
-            contactsList[index].trust += trustIncreasedEachContact;
+            if (Random.Range(0, 1f) > .5f)
+            {
+                string[] successDialogueList = contactsList[index].data.trustIncreaseSentences;
+                Dialogue successDialogue = new Dialogue(contactsList[index].data.name, successDialogueList[Random.Range(0, successDialogueList.Length)]);
+                yield return SystemManager.instance.dialogueManager.DisplaySentence(successDialogue);
+                //increase trust
+                contactsList[index].trust += trustIncreasedEachContact;
+            }
+            else
+            {
+                //Handles questions
+                string[] questions = contactsList[index].data.questions;
+                int questionindex = questions.Length % 3;
+                questionindex = Random.Range(0, questionindex);
+                string[] results = contactsList[index].data.results;
+                List<Dialogue> questiondialogue = new List<Dialogue>();
+                Dialogue[] resultsdialogue = new Dialogue[3];
+                for(int i = 3*questionindex; i < 3*(questionindex+1); i++)
+                {
+                    print(i);
+                    resultsdialogue[i] = new Dialogue(contactsList[index].data.name, results[i]);
+                    if (questions[i] != "")
+                    {
+                        questiondialogue.Add(new Dialogue(contactsList[index].data.name, questions[i]));
+                    }
+                }
+                yield return SystemManager.instance.dialogueManager.DisplayQuestion(questiondialogue, contactsList[index].data.options, resultsdialogue);
+                contactsList[index].trust += contactsList[index].data.resultingtrust[SystemManager.instance.dialogueManager.option*questionindex];
+
+            }
+
             //if trust is enough, offer job
             if(contactsList[index].trust >= contactsList[index].data.trustForJob && !contactsList[index].hasOfferedJob
                 && contactsList[index].data.job != SystemManager.instance.currentJob)

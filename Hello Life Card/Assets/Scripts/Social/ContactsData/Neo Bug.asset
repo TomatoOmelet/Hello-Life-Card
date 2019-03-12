@@ -19,7 +19,23 @@ MonoBehaviour:
     cursed by the moon. Guess I will need to stay around you to prevent you from being
     killed.
   trustIncreaseSentences:
-  - "I sense some evil power. It seems I need to leave now. Don't follow me, you should
-    live a peaceful life like a human. I'm sure we will meet again."
+  - I sense some evil power. It seems I need to leave now. Don't follow me, you should
+    live a peaceful life like a human. I'm sure we will meet again.
   referSentence: You struggled to live until today. Maybe you are not only a common
     human you seem to be. If you wish, you can fight with me to save this world.
+  questions:
+  - Tell me, how have you managed to survive until today without my protection. I
+    can sense that an evil power is so very close to taking to taking your life it
+    seems impossible that you are not dead.
+  - 
+  - 
+  options:
+  - I died a while back.
+  - Superpowers.
+  - My parents died protecting me.
+  results:
+  - You are undead? I must put you and your evil power to rest.
+  - Ah, so you are like me, at some you should help me keep this shadowed world safe.
+  - I see, we are more alike than it seems than I lost my parents at a young age too.
+    Do not fear though, I can teach you.
+  resultingtrust: f6ffffff0f00000019000000
