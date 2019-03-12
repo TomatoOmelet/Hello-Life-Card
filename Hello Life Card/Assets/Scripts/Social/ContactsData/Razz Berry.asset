@@ -18,5 +18,22 @@ MonoBehaviour:
   socializeSentence: Hey, you're pretty cool! We should hang out more!
   trustIncreaseSentences:
   - I'm happy to have met you. Thanks for being such a good friend!
-  referSentence: I think you'd be a great Youtuber. You'd gain an audience in no time!
+  - Do you mind if I stream this?
+  - Do you have time for a collab today? I found a new game to play!
+  referSentence: I think you'd be a great Streamer. You'd gain an audience in no time!
     What do you say?
+  questions:
+  - I've spent so much time streaming every day I forget sometimes that tthere's not
+    people watching me.
+  - So I end up accidentally blurting out random things in public, or narrating what
+    I'm doing.
+  - Do you think I should quit being a streamer?
+  options:
+  - Yeah, work sucks.
+  - Nah, its worth the money.
+  - Nah, its worth pleasing the people.
+  results:
+  - Mmm but I really need the money right now. Maybe once I have enough saved up.
+  - Yea, even if nothing else at least I'm making money.
+  - You're right, my viewers would freak if I just bailed on them.
+  resultingtrust: fbfffffffbffffff19000000

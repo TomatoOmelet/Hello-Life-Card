@@ -21,13 +21,16 @@ MonoBehaviour:
   trustIncreaseSentences:
   - I sense some evil power. It seems I need to leave now. Don't follow me, you should
     live a peaceful life like a human. I'm sure we will meet again.
+  - You seem to be surrounded by evil power. Do not worry, I will watch over you today
+    human. You have nothing to fear.
+  - Why do you seek me out human, my place is in the shadows. I cannot rest until
+    my work is done. Until then leave me be.
   referSentence: You struggled to live until today. Maybe you are not only a common
     human you seem to be. If you wish, you can fight with me to save this world.
   questions:
-  - Tell me, how have you managed to survive until today without my protection. I
-    can sense that an evil power is so very close to taking to taking your life it
-    seems impossible that you are not dead.
-  - 
+  - 'Tell me, how have you managed to survive until today without my protection. '
+  - I can sense that an evil power is so very close to taking to taking your life
+    it seems impossible that you are not dead.
   - 
   options:
   - I died a while back.

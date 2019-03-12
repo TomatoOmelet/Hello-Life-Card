@@ -26,3 +26,17 @@ MonoBehaviour:
     the most valuable things are the people I met :D.
   referSentence: You are a talented person. You should work with me at Bmazon Game
     Studio XD
+  questions:
+  - Pop Quiz :)
+  - What type of collision is not handled by Unity?
+  - ' Dynamic rigid bodies, with kinematic rigid bodies, dynamic rigid bodies and
+    static colliders, or kinematic rigid bodies and static colliders?'
+  options:
+  - Dynamic and Kinematic
+  - Dynamic and Static
+  - Kinemtic and Static
+  results:
+  - No :( You need to study a bit more...
+  - No :( You need to study a bit more...
+  - Right, You are so talented :)
+  resultingtrust: f6fffffff6ffffff1e000000

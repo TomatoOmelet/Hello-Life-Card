@@ -25,15 +25,16 @@ MonoBehaviour:
     sauce.
   referSentence: You should make four for four for poor college student with me.
   questions:
-  - Testing
-  - Testing1
-  - Testing2
+  - Whats your favorite part of four for four?
+  - 
+  - 
   options:
   - Chicken Strip
   - Bacon Burger
-  - Pepsi
+  - Crispy Chicken Sandwich
   results:
-  - ' Nope, we have chicken nuggets silly.'
-  - Yeah, but its not the best.
-  - Oh Yea, Is good.
-  resultingtrust: f6ffffff1400000019000000
+  - ' Nope, we have chicken nuggets silly. you cant get chicken strips with four for
+    four.'
+  - Are you sure, I guess so..
+  - Oh Yea, makes sense I've seen how you bite it.
+  resultingtrust: f6ffffff0a00000019000000

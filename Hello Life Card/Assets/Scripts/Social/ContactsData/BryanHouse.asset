@@ -21,3 +21,16 @@ MonoBehaviour:
   - House, House? House House House.
   - House House. House House House. House House House...... House, House House.
   referSentence: HOUSUU!
+  questions:
+  - House House.
+  - House House House.
+  - 
+  options:
+  - House.
+  - HOUSUU!
+  - House House House, House House.
+  results:
+  - '...House.'
+  - HOUSUU! HOUSUU!
+  - House House.
+  resultingtrust: 050000001400000019000000

@@ -24,15 +24,16 @@ MonoBehaviour:
     you~
   referSentence: I want to fire you, but I guess you need to work in my company first~
   questions:
-  - yo
-  - 
+  - What is your favorite way to betray someone~
+  - Ours is to wait until they trust me completely~ And then watch their face contort
+    with agony as they realize they are dying.
   - 
   options:
-  - y
-  - yy
-  - yyy
+  - My favorite will be when I betray you.
+  - To sacrifice them to Uncle Death.
+  - I don't betray people.
   results:
-  - yoy
-  - yoyy
-  - yoyyy
-  resultingtrust: 190000000f000000f6ffffff
+  - You want to betray me? That would truly be an anime betrayal~
+  - Uncle Death used to be my favorite too~ but he stopped talking to me a while ago.
+  - So boring~
+  resultingtrust: 1400000019000000f6ffffff
