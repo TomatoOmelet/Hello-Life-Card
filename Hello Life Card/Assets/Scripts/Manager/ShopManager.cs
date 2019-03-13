@@ -86,7 +86,7 @@ public class ShopManager : MonoBehaviour
         else
         {
             
-            SystemManager.instance.StartCoroutine(display(new Dialogue("", "Unfortunately, you don't have the proper funding")));
+            SystemManager.instance.StartCoroutine(display(new Dialogue("", "Unfortunately, you don't have the proper funding.")));
             //have a popup that says something to the effect of not enough money
         }
         //buys the item associated with the button
@@ -97,7 +97,7 @@ public class ShopManager : MonoBehaviour
     {
 
        //ystemManager.instance.playerIntelligence += 30;
-        Debug.Log("After receiving a textbook, you feel like you've gotten smarter");
+        Debug.Log("After receiving a textbook, you feel like you've gotten smarter.");
        
         
         
@@ -108,7 +108,7 @@ public class ShopManager : MonoBehaviour
     private void studyRate()
     {
         SystemManager.instance.playerStudyRate += 10;
-        Debug.Log("With a new desk, you will be better at studying");
+        Debug.Log("With a new desk, you will be better at studying.");
     }
    private void addContacts()
     {
@@ -224,7 +224,7 @@ public class ShopManager : MonoBehaviour
         }
         else if (itemName == "Life Card Fragment")
         {
-            yield return display(new Dialogue("", "Life is in your grasp"));
+            yield return display(new Dialogue("", "Life is in your grasp! You have a life card."));
             items[itemName]();
         }
         
