@@ -16,6 +16,7 @@ public class SystemUIManager : MonoBehaviour
     public TextMeshProUGUI intelligenceChangePromptText;
     public TextMeshProUGUI moneyChangePromptText;
     public TextMeshProUGUI jobInfoText;
+    public TextMeshProUGUI weeksremainingtext;
 
 
     //update UI elements
@@ -32,6 +33,11 @@ public class SystemUIManager : MonoBehaviour
     public void UpdateWeekUI(int week)
     {
         weekText.text =  "Week: " + week + "/13";
+    }
+
+    public void UpdateWeeksRemaining(int remaining)
+    {
+        weeksremainingtext.text = "Weeks Remaining: " + remaining;
     }
 
     public void UpdateSeasonUI(Season season)

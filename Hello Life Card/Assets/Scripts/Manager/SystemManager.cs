@@ -24,6 +24,7 @@ public class SystemManager : MonoBehaviour
     private int week = 1;
     public Job currentJob;
     public bool jobGotByReference = false;
+    public int weeksremaining = 52;
     
 
     //object needed
@@ -92,6 +93,7 @@ public class SystemManager : MonoBehaviour
         uiManager.UpdateMoneyUI(money);
         uiManager.UpdateWeekUI(week);
         uiManager.UpdateSeasonUI(season);
+        uiManager.UpdateWeeksRemaining(weeksremaining);
     }
 
     public void BackToMenu()
@@ -111,6 +113,7 @@ public class SystemManager : MonoBehaviour
             GameEnd();
             return;
         }
+        weeksremaining--;
         //increase week and check if need to go to next season
         if(++week > 13)
         {
@@ -136,6 +139,7 @@ public class SystemManager : MonoBehaviour
             }
         }
         //update ui
+        uiManager.UpdateWeeksRemaining(weeksremaining);
         uiManager.UpdateWeekUI(week);
         uiManager.UpdateSeasonUI(season);
     }
