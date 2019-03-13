@@ -28,13 +28,22 @@ MonoBehaviour:
   - Whats your favorite part of four for four?
   - 
   - 
+  - Haha, I love watching you eat four for fours.
+  - Will you ever stop getting them?
+  - 
   options:
-  - Chicken Strip
-  - Bacon Burger
-  - Crispy Chicken Sandwich
+  - Chicken Strip.
+  - Bacon Burger.
+  - Crispy Chicken Sandwich.
+  - I will now.
+  - Never.
+  - I'm leaving now.
   results:
   - ' Nope, we have chicken nuggets silly. you cant get chicken strips with four for
     four.'
   - Are you sure, I guess so..
   - Oh Yea, makes sense I've seen how you bite it.
-  resultingtrust: f6ffffff0a00000019000000
+  - What, but you are so mean I just like the way you bite the chicken.
+  - Of course. I'll look forward to seeing you every day eating your chicken then.
+  - Where are you going, wait you left your chicken sandwich.
+  resultingtrust: f6ffffff0a00000019000000f6ffffff19000000f6ffffff

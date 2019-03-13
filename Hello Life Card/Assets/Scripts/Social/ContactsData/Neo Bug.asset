@@ -32,13 +32,23 @@ MonoBehaviour:
   - I can sense that an evil power is so very close to taking to taking your life
     it seems impossible that you are not dead.
   - 
+  - Human, stop following me. It will only put yourself in further danger.
+  - Why do you follow me incessantly as a shadow follows its caster.
+  - 
   options:
   - I died a while back.
   - Superpowers.
   - My parents died protecting me.
+  - You are cool.
+  - I want to learn from you.
+  - I want to kill you.
   results:
   - You are undead? I must put you and your evil power to rest.
   - Ah, so you are like me, at some you should help me keep this shadowed world safe.
   - I see, we are more alike than it seems than I lost my parents at a young age too.
     Do not fear though, I can teach you.
-  resultingtrust: f6ffffff0f00000019000000
+  - I do not understand what you mean by cool. But I appreciate what is likely a compliment.
+  - Its too dangerous for normal humans, my job is to protect you. If you truly wish
+    to learn you must suffer first.
+  - I suppose thats a joke, a very bad joke though.
+  resultingtrust: f6ffffff0f00000019000000140000000f000000f6ffffff
