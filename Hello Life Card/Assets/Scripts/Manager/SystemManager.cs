@@ -106,13 +106,13 @@ public class SystemManager : MonoBehaviour
     public void DayEnd()
     {
         //check if game end
-        if(week == 9 && season == Season.Winter)
+        if(week == 13 && season == Season.Winter)
         {
             GameEnd();
             return;
         }
         //increase week and check if need to go to next season
-        if(++week > 9)
+        if(++week > 13)
         {
             week = 1;
             season = (Season)((int)season + 1);

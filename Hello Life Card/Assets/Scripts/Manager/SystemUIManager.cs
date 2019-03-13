@@ -31,7 +31,7 @@ public class SystemUIManager : MonoBehaviour
 
     public void UpdateWeekUI(int week)
     {
-        weekText.text =  "Week: " + week + "/9";
+        weekText.text =  "Week: " + week + "/13";
     }
 
     public void UpdateSeasonUI(Season season)
