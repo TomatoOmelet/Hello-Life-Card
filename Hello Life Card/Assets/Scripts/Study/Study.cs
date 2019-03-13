@@ -13,7 +13,7 @@ public class Study : MonoBehaviour
 
     public IEnumerator StudyAction()
     {
-        int intelligence = IntelligenceIncrease();
+        int intelligence = SystemManager.instance.playerStudyRate;
         //construc the sentence displayed before 
         Dialogue dialogue = new Dialogue("", string.Format(msgs[Random.Range(0,msgs.Count)],intelligence));
         yield return SystemManager.instance.dialogueManager.DisplaySentence(dialogue);

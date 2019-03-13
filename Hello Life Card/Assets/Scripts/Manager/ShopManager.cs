@@ -9,7 +9,6 @@ public class ShopManager : MonoBehaviour
    // private int uiIntelligence;//just used for testing purposes
     //private int uiMoney = 0;
     public RNGGenerator lottery;
-    
     public Dictionary<string,System.Action> items = new Dictionary<string,System.Action>();
     //RNGGenerator rng = new RNGGenerator();
    
@@ -108,6 +107,7 @@ public class ShopManager : MonoBehaviour
 
     private void studyRate()
     {
+        SystemManager.instance.playerStudyRate += 10;
         Debug.Log("With a new desk, you will be better at studying");
     }
    private void addContacts()
@@ -157,15 +157,19 @@ public class ShopManager : MonoBehaviour
         if (itemName == "Textbook")
         {
             //  Debug.Log("this is dumb");
-            yield return display(new Dialogue("", "After receiving a textbook, you feel like you've gotten smarter"));
+            yield return display(new Dialogue("", "After receiving a textbook, you feel like you've gotten smarter."));
             items[itemName]();
             SystemManager.instance.StartCoroutine(AddScore(30));
         }
         else if (itemName == "Fancy Desk")
         {
             //  Debug.Log("this is fancy desk");
-            yield return display(new Dialogue("", "With a new desk, you will be better at studying"));
-            items[itemName]();
+
+            //{
+                yield return display(new Dialogue("", "With a new desk, you will be better at studying."));
+                items[itemName]();
+            //}
+           
         }
         else if (itemName == "Fancy Cell Phone")
         {

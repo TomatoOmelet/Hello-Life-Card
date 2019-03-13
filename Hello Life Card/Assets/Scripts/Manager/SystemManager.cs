@@ -17,6 +17,7 @@ public class SystemManager : MonoBehaviour
     public static SystemManager instance{get; private set;}
     //states
     private int intelligence = 0;
+    private int studyRate = 10;
     private int money = 0;
     private int lifeCardFragment = 0;
     private Season season = Season.Spring;
@@ -29,6 +30,14 @@ public class SystemManager : MonoBehaviour
     public SystemUIManager uiManager;
     public DialogueManager dialogueManager;
     public ContactsManager contactsManager;
+    public int playerStudyRate
+    {
+        get { return studyRate; }
+        set
+        {
+            studyRate = value;
+        }
+    }
     public int playerLifeCardFragment {
         get{return lifeCardFragment;} 
         set{
