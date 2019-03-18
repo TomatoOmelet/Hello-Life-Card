@@ -51,7 +51,7 @@ public class SystemUIManager : MonoBehaviour
 
     public void UpdateLifeCardFragmentUI(int value)
     {
-        lifeCardFragmentText.text = "Life Card Fragments: " + value;
+        lifeCardFragmentText.text = "Life Card Fragments: " + value + "/3";
     }
 
     //==============================================================================

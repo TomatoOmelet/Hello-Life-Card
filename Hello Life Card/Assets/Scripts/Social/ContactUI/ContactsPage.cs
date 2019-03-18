@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ContactsPage : MonoBehaviour
 {
-    public Text nameText;
-    public Text trustText;
-    public Text jobText;
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI trustText;
+    public TextMeshProUGUI jobText;
 
     public GameObject sacrificeButton;
 
@@ -16,7 +17,7 @@ public class ContactsPage : MonoBehaviour
     public void UpdatePage(Contacts contacts)
     {
         nameText.text = contacts.data.name;
-        trustText.text = "Trust: " + contacts.trust;
+        trustText.text = "Trust: " + contacts.trust + "/" + SystemManager.instance.contactsManager.trustToSacrifice;
         jobText.text = "Work as: " + contacts.data.job.jobname;
         //if trust is enough, Delete becom sacrifice
         if(contacts.trust >= SystemManager.instance.contactsManager.trustToSacrifice)
