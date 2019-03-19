@@ -2379,6 +2379,7 @@ MonoBehaviour:
   closeButton: {fileID: 1752633045}
   resumeLocation: {fileID: 1664536098}
   recruiterLocation: {fileID: 789298241}
+  gotchastart: {fileID: 8300000, guid: cb337fd0830cfc444adac2586b11b626, type: 3}
   shrinkingRings:
   - {fileID: 400514251}
   - {fileID: 558765728}
@@ -2988,6 +2989,7 @@ MonoBehaviour:
   uiManager: {fileID: 184403545}
   dialogueManager: {fileID: 1498940799}
   contactsManager: {fileID: 184403544}
+  audiomanager: {fileID: 184403549}
   windowImage: {fileID: 365287369}
   seasonWindowSprites:
   - {fileID: 21300000, guid: c2bf1c8e9c3497c42af8f11476963b6e, type: 3}
@@ -7557,6 +7559,8 @@ MonoBehaviour:
   - {fileID: 1750734554}
   - {fileID: 1491849342}
   - {fileID: 640229794}
+  rejectionsfx: {fileID: 8300000, guid: 9d64e86ebcedaad4ba57f1e650147511, type: 3}
+  offersfx: {fileID: 8300000, guid: b25a001459454df4fa7860d36f9282a2, type: 3}
 --- !u!114 &497540582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13788,17 +13792,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 159942775}
-        m_MethodName: Gotcha
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 184403549}
         m_MethodName: PlayClip
         m_Mode: 2
@@ -23204,7 +23197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1821274612
 Transform:
   m_ObjectHideFlags: 0

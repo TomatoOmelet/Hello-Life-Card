@@ -31,6 +31,7 @@ public class SystemManager : MonoBehaviour
     public SystemUIManager uiManager;
     public DialogueManager dialogueManager;
     public ContactsManager contactsManager;
+    public AudioManager audiomanager;
     public int playerStudyRate
     {
         get { return studyRate; }

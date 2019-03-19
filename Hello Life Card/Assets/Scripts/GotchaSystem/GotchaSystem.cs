@@ -11,12 +11,14 @@ public class GotchaSystem : MonoBehaviour
     public GameObject closeButton;
     public Transform resumeLocation;
     public Transform recruiterLocation;
+    public AudioClip gotchastart;
 
     private Job job;
 
     [Header("Animation Effect")]
     public ShrinkingRing[] shrinkingRings;
     public ParticleGenerator particleGenerator;
+ 
 
     void Start()
     {
@@ -45,7 +47,7 @@ public class GotchaSystem : MonoBehaviour
         closeButton.SetActive(false);
         resume.GetComponent<Button>().interactable = false;
         job = jobHunt.Hunt();
-
+        SystemManager.instance.audiomanager.PlayClip(gotchastart);
         StartCoroutine(GotchaAnimation(job));
     }
 

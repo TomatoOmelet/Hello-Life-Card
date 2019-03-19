@@ -19,6 +19,8 @@ public class JobHunt : MonoBehaviour
     public GameObject refuseButton;
     public GameObject okButton;
     public Image[] stars;
+    public AudioClip rejectionsfx;
+    public AudioClip offersfx;
    
     public Job Hunt()
     {
@@ -78,6 +80,7 @@ public class JobHunt : MonoBehaviour
     public void SetupJobOfferWindow(string newjobname, int newjobincome, string oldjobname, int oldjobincome, int jobStars)
     {
         jobofferwind.SetActive(true);
+        SystemManager.instance.audiomanager.PlayClip(offersfx);
         //set buttons
         confirmButton.SetActive(true);
         refuseButton.SetActive(true);
@@ -91,6 +94,7 @@ public class JobHunt : MonoBehaviour
     public void SetupNoResponse()
     {
         jobofferwind.SetActive(true);
+        SystemManager.instance.audiomanager.PlayClip(rejectionsfx);
         //set buttons
         confirmButton.SetActive(false);
         refuseButton.SetActive(false);
@@ -104,6 +108,7 @@ public class JobHunt : MonoBehaviour
     public void SetupRejection()
     {
         jobofferwind.SetActive(true);
+        SystemManager.instance.audiomanager.PlayClip(rejectionsfx);
         //set buttons
         confirmButton.SetActive(false);
         refuseButton.SetActive(false);
