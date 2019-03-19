@@ -6615,7 +6615,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -11194,7 +11194,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -13799,6 +13799,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 8300000, guid: 2251ea405414e6e4a80cd694f6394841,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 159942775}
+        m_MethodName: Gotcha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -23197,7 +23208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1821274612
 Transform:
   m_ObjectHideFlags: 0
@@ -23742,6 +23753,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5652974629711466684, guid: efc3c8557a1ce10408c458eaa23e2ce3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5652974629711466687, guid: efc3c8557a1ce10408c458eaa23e2ce3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23805,7 +23821,7 @@ PrefabInstance:
     - target: {fileID: 5652974629711466687, guid: efc3c8557a1ce10408c458eaa23e2ce3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5652974629711466687, guid: efc3c8557a1ce10408c458eaa23e2ce3,
         type: 3}
@@ -25758,7 +25774,7 @@ PrefabInstance:
     - target: {fileID: 5652974629711466687, guid: efc3c8557a1ce10408c458eaa23e2ce3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5652974629711466687, guid: efc3c8557a1ce10408c458eaa23e2ce3,
         type: 3}
