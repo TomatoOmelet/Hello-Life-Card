@@ -10,12 +10,13 @@ public class SystemUIManager : MonoBehaviour
 {
     public TextMeshProUGUI intelligenceText;
     public TextMeshProUGUI moneyText;
-    public TextMeshProUGUI weekText;
-    public TextMeshProUGUI seasonText;
+    //public TextMeshProUGUI weekText;
+    //public TextMeshProUGUI seasonText;
     public TextMeshProUGUI lifeCardFragmentText;
     public TextMeshProUGUI intelligenceChangePromptText;
     public TextMeshProUGUI moneyChangePromptText;
     public TextMeshProUGUI jobInfoText;
+    public TextMeshProUGUI jobInfoSalary;
     public TextMeshProUGUI weeksremainingtext;
 
 
@@ -32,26 +33,29 @@ public class SystemUIManager : MonoBehaviour
 
     public void UpdateWeekUI(int week)
     {
-        weekText.text =  "Week: " + week + "/13";
+        //weekText.text =  "Week: " + week + "/13";
     }
 
     public void UpdateWeeksRemaining(int remaining)
     {
-        weeksremainingtext.text = "Weeks Remaining: " + remaining;
+        weeksremainingtext.text = "" + remaining;
+        //weeksremainingtext.text = "Weeks Remaining: " + remaining;
     }
 
     public void UpdateSeasonUI(Season season)
     {
-        seasonText.text = "Season: " + season.ToString();
+        //seasonText.text = "Season: " + season.ToString();
     }
     public void UpdateJobInfoUI(string jobname, int jobincome)
     {
-        jobInfoText.text= string.Format("Current Job: {0}\nCurrent Pay: ${1}", jobname, jobincome);
+        jobInfoText.text = jobname;
+        jobInfoSalary.text = jobincome + "$";
+        //jobInfoText.text= string.Format("Current Job: {0}\nCurrent Pay: ${1}", jobname, jobincome);
     }
 
     public void UpdateLifeCardFragmentUI(int value)
     {
-        lifeCardFragmentText.text = "Life Card Fragments: " + value + "/3";
+        lifeCardFragmentText.text = value + "/3";
     }
 
     //==============================================================================

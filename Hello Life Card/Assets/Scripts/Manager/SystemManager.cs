@@ -91,8 +91,8 @@ public class SystemManager : MonoBehaviour
     {
         uiManager.UpdateIntelligenceUI(intelligence);
         uiManager.UpdateMoneyUI(money);
-        uiManager.UpdateWeekUI(week);
-        uiManager.UpdateSeasonUI(season);
+        //uiManager.UpdateWeekUI(week);
+        //uiManager.UpdateSeasonUI(season);
         uiManager.UpdateWeeksRemaining(weeksremaining);
     }
 
@@ -140,8 +140,8 @@ public class SystemManager : MonoBehaviour
         }
         //update ui
         uiManager.UpdateWeeksRemaining(weeksremaining);
-        uiManager.UpdateWeekUI(week);
-        uiManager.UpdateSeasonUI(season);
+        //uiManager.UpdateWeekUI(week);
+        //uiManager.UpdateSeasonUI(season);
     }
 
     //check the end of the game
