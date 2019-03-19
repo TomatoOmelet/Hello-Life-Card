@@ -121,22 +121,65 @@ public class SystemUIManager : MonoBehaviour
         //add numbers one by one
         if(value >= 0)
         {
-            for(int x = 0; x< value; ++x)
+            int unit = value/50;
+            if(unit < 1) unit = 1;
+
+            int x = 0;
+            for(x = 0; x + unit< value; x += unit)
             {
                 if(text == moneyText)
-                    UpdateMoneyUI(++uiMoney);
+                {
+                    uiMoney += unit;
+                    UpdateMoneyUI(uiMoney);
+                }
                 else
-                    UpdateIntelligenceUI(++uiIntelligence);
+                {
+                    uiIntelligence += unit;
+                    UpdateIntelligenceUI(uiIntelligence);
+                }
                 yield return null;
             }
+            //end value needs to match
+            if(text == moneyText)
+            {
+                uiMoney += (value - x);
+                UpdateMoneyUI(uiMoney);
+            }
+            else
+            {
+                uiIntelligence += (value - x);
+                UpdateIntelligenceUI(uiIntelligence);
+            }
+
         }else{//reduce 
-            for(int x = 0; x< -value; ++x)
+            int unit = value/50;
+            if(unit > -1) unit = -1;
+
+            int x = 0;
+            for(x = 0; x - unit< -value; x -= unit)
             {
                 if(text == moneyText)
-                    UpdateMoneyUI(--uiMoney);
+                {
+                    uiMoney += unit;
+                    UpdateMoneyUI(uiMoney);
+                }
                 else
-                    UpdateIntelligenceUI(--uiIntelligence);
+                {
+                    uiIntelligence += unit;
+                    UpdateMoneyUI(uiIntelligence);
+                }
                 yield return null;
+            }
+            //end value needs to match
+            if(text == moneyText)
+            {
+                uiMoney += (value + x);
+                UpdateMoneyUI(uiMoney);
+            }
+            else
+            {
+                uiIntelligence += (value + x);
+                UpdateIntelligenceUI(uiIntelligence);
             }
         }
     }
