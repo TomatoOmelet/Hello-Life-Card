@@ -111,6 +111,7 @@ public class SystemManager : MonoBehaviour
         //check if game end
         if(week == 13 && season == Season.Winter)
         {
+            uiManager.UpdateWeeksRemaining(0);
             GameEnd();
             return;
         }
